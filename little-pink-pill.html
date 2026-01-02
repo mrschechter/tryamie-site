@@ -564,11 +564,20 @@
             justify-content: center;
             cursor: pointer;
             transition: all 0.2s;
-            padding: 12px;
+            padding: 8px;
+            overflow: hidden;
         }
 
         .thumbnail:hover, .thumbnail.active {
             border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(74, 144, 164, 0.2);
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
         }
 
         .thumbnail svg {
@@ -1541,21 +1550,18 @@
     <section class="product-hero">
         <div class="container product-hero-inner">
             <div class="product-gallery">
-                <div class="product-main-image">
+                <div class="product-main-image" id="main-product-image">
                     <img src="images/little-pink-pill.png" alt="Amie Little Pink Pill" style="max-width: 100%; height: auto; max-height: 400px; object-fit: contain;">
                 </div>
                 <div class="product-thumbnails">
-                    <div class="thumbnail active">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                    <div class="thumbnail active" onclick="changeImage('images/little-pink-pill.png', this)">
+                        <img src="images/little-pink-pill.png" alt="Product" style="width: 100%; height: 100%; object-fit: contain;">
                     </div>
-                    <div class="thumbnail">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                    <div class="thumbnail" onclick="changeImage('images/lifestyle/intimacy-couple-v2.png', this)">
+                        <img src="images/lifestyle/intimacy-couple-v2.png" alt="Lifestyle" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;">
                     </div>
-                    <div class="thumbnail">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
-                    </div>
-                    <div class="thumbnail">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+                    <div class="thumbnail" onclick="changeImage('images/lifestyle/intimacy-confidence-v2.png', this)">
+                        <img src="images/lifestyle/intimacy-confidence-v2.png" alt="Lifestyle" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;">
                     </div>
                 </div>
             </div>
@@ -1652,10 +1658,10 @@
 
             <div class="lifestyle-grid">
                 <div class="lifestyle-card">
-                    <img src="images/lifestyle/intimacy-couple.png" alt="Happy romantic couple">
+                    <img src="images/lifestyle/intimacy-couple-v2.png" alt="Happy romantic couple">
                 </div>
                 <div class="lifestyle-card">
-                    <img src="images/lifestyle/intimacy-confidence.png" alt="Confident woman">
+                    <img src="images/lifestyle/intimacy-confidence-v2.png" alt="Confident woman">
                 </div>
             </div>
         </div>
@@ -1922,6 +1928,16 @@
     </footer>
 
     <script>
+        // Product Image Gallery
+        function changeImage(src, thumbnail) {
+            const mainImage = document.querySelector('#main-product-image img');
+            mainImage.src = src;
+
+            // Update active thumbnail
+            document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+            thumbnail.classList.add('active');
+        }
+
         // FAQ Accordion
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
