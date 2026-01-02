@@ -1279,6 +1279,52 @@
             color: var(--success);
         }
 
+        /* Lifestyle Gallery Section */
+        .lifestyle {
+            padding: 80px 0;
+            background: var(--cream);
+        }
+
+        .lifestyle-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .lifestyle-card {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .lifestyle-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .lifestyle-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 900px) {
+            .lifestyle-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .lifestyle-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lifestyle-card img {
+                height: 240px;
+            }
+        }
+
         /* How It Works */
         .how-it-works {
             padding: 80px 0;
@@ -2145,6 +2191,28 @@
                 <div class="individual-note">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
                     <p><strong>Note:</strong> If you have a uterus, progesterone is required with estrogen to protect your uterine lining. Your doctor will confirm the right combination during your consultation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lifestyle Gallery -->
+    <section class="lifestyle">
+        <div class="container">
+            <div class="section-header">
+                <h2>Reclaim Your Vitality</h2>
+                <p>Join thousands of women who've rediscovered their energy, confidence, and joy.</p>
+            </div>
+
+            <div class="lifestyle-grid">
+                <div class="lifestyle-card">
+                    <img src="images/lifestyle/hrt-vibrant.png" alt="Vibrant confident woman enjoying life">
+                </div>
+                <div class="lifestyle-card">
+                    <img src="images/lifestyle/hrt-active-life.png" alt="Active woman hiking outdoors">
+                </div>
+                <div class="lifestyle-card">
+                    <img src="images/lifestyle/hrt-wellness.png" alt="Peaceful morning wellness routine">
                 </div>
             </div>
         </div>
