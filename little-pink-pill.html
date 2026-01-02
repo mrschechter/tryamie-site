@@ -810,6 +810,11 @@
             margin: 0 auto;
         }
 
+        .lifestyle-grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+            max-width: 100%;
+        }
+
         .lifestyle-card {
             border-radius: var(--radius-lg);
             overflow: hidden;
@@ -828,13 +833,35 @@
             object-fit: cover;
         }
 
+        .lifestyle-grid-4 .lifestyle-card img {
+            height: 220px;
+        }
+
+        @media (max-width: 900px) {
+            .lifestyle-grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .lifestyle-grid-4 .lifestyle-card img {
+                height: 200px;
+            }
+        }
+
         @media (max-width: 600px) {
             .lifestyle-grid {
                 grid-template-columns: 1fr;
             }
 
+            .lifestyle-grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .lifestyle-card img {
                 height: 280px;
+            }
+
+            .lifestyle-grid-4 .lifestyle-card img {
+                height: 160px;
             }
         }
 
@@ -1557,11 +1584,14 @@
                     <div class="thumbnail active" onclick="changeImage('images/little-pink-pill.png', this)">
                         <img src="images/little-pink-pill.png" alt="Product" style="width: 100%; height: 100%; object-fit: contain;">
                     </div>
-                    <div class="thumbnail" onclick="changeImage('images/lifestyle/intimacy-couple-v2.png', this)">
-                        <img src="images/lifestyle/intimacy-couple-v2.png" alt="Lifestyle" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;">
+                    <div class="thumbnail" onclick="changeImage('images/lifestyle/little-pink-pill-woman-product.png', this)">
+                        <img src="images/lifestyle/little-pink-pill-woman-product.png" alt="Woman with product" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;">
                     </div>
-                    <div class="thumbnail" onclick="changeImage('images/lifestyle/intimacy-confidence-v2.png', this)">
-                        <img src="images/lifestyle/intimacy-confidence-v2.png" alt="Lifestyle" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;">
+                    <div class="thumbnail" onclick="changeImage('images/lifestyle/little-pink-pill-confidence.png', this)">
+                        <img src="images/lifestyle/little-pink-pill-confidence.png" alt="Confidence" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage('images/lifestyle/little-pink-pill-happy-couple.png', this)">
+                        <img src="images/lifestyle/little-pink-pill-happy-couple.png" alt="Happy couple" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;">
                     </div>
                 </div>
             </div>
@@ -1656,12 +1686,18 @@
                 <p>Join thousands of women who've reignited their desire and deepened their connection.</p>
             </div>
 
-            <div class="lifestyle-grid">
+            <div class="lifestyle-grid lifestyle-grid-4">
                 <div class="lifestyle-card">
-                    <img src="images/lifestyle/intimacy-couple-v2.png" alt="Happy romantic couple">
+                    <img src="images/lifestyle/little-pink-pill-woman-product.png" alt="Woman confidently holding Little Pink Pill">
                 </div>
                 <div class="lifestyle-card">
-                    <img src="images/lifestyle/intimacy-confidence-v2.png" alt="Confident woman">
+                    <img src="images/lifestyle/little-pink-pill-confidence.png" alt="Confident woman feeling desirable">
+                </div>
+                <div class="lifestyle-card">
+                    <img src="images/lifestyle/little-pink-pill-couple-bedroom.png" alt="Intimate romantic connection">
+                </div>
+                <div class="lifestyle-card">
+                    <img src="images/lifestyle/little-pink-pill-happy-couple.png" alt="Happy couple reconnecting">
                 </div>
             </div>
         </div>
