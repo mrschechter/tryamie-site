@@ -1,0 +1,38 @@
+# Netlify configuration
+
+# Redirects for clean URLs (optional - lets /tirzepatide work instead of /tirzepatide.html)
+[[redirects]]
+  from = "/tirzepatide"
+  to = "/tirzepatide.html"
+  status = 200
+
+[[redirects]]
+  from = "/little-pink-pill"
+  to = "/little-pink-pill.html"
+  status = 200
+
+[[redirects]]
+  from = "/hrt"
+  to = "/hrt.html"
+  status = 200
+
+[[redirects]]
+  from = "/semaglutide"
+  to = "/semaglutide.html"
+  status = 200
+
+[[redirects]]
+  from = "/oral-semaglutide"
+  to = "/oral-semaglutide.html"
+  status = 200
+
+# Headers for caching
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
