@@ -797,6 +797,307 @@
         }
 
         /* Lifestyle Gallery Section */
+        /* Problem Agitation Section */
+        .problem-agitation {
+            padding: 80px 0;
+            background: var(--cream);
+        }
+
+        .problem-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .problem-content h2 {
+            font-size: 36px;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+
+        .problem-item {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .problem-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .problem-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--text-dark);
+        }
+
+        .problem-text h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .problem-text p {
+            font-size: 14px;
+            color: var(--text-medium);
+            line-height: 1.6;
+        }
+
+        .problem-solution {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: var(--radius-lg);
+            padding: 28px 36px;
+            text-align: center;
+        }
+
+        .problem-solution p {
+            font-size: 17px;
+            color: var(--white);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .problem-solution strong {
+            color: var(--accent-light);
+        }
+
+        @media (max-width: 768px) {
+            .problem-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Clinical Proof Section */
+        .clinical-proof {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .proof-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .proof-eyebrow {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 8px 18px;
+            border-radius: 50px;
+            margin-bottom: 16px;
+        }
+
+        .proof-header h2 {
+            font-size: 36px;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .proof-citation {
+            font-size: 16px;
+            color: var(--text-medium);
+        }
+
+        .proof-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .proof-stat-card {
+            background: var(--cream);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .proof-stat-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+
+        .proof-stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary);
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .proof-stat-label {
+            font-size: 14px;
+            color: var(--text-dark);
+            font-weight: 500;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+
+        .proof-stat-source {
+            font-size: 11px;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .proof-cta {
+            text-align: center;
+        }
+
+        .proof-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary);
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .proof-link:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 900px) {
+            .proof-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .proof-stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .proof-stat-number {
+                font-size: 40px;
+            }
+        }
+
+        /* Brand Promise Section */
+        .brand-promise {
+            padding: 80px 0;
+            background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+        }
+
+        .promise-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .promise-eyebrow {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .promise-content h2 {
+            font-size: 36px;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .promise-content p {
+            font-size: 16px;
+            color: var(--text-medium);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .promise-credentials {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .credential-item {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--cream-dark);
+        }
+
+        .credential-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .credential-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--white);
+        }
+
+        .credential-text strong {
+            display: block;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .credential-text span {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        @media (max-width: 900px) {
+            .promise-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .promise-content {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .promise-credentials {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .lifestyle {
             padding: 80px 0;
             background: var(--cream);
@@ -1244,6 +1545,94 @@
             background: var(--cream);
         }
 
+        /* Important Safety Information */
+        .safety-info {
+            padding: 40px 0;
+            background: var(--cream);
+            border-top: 1px solid var(--cream-dark);
+        }
+
+        .isi-accordion {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--cream-dark);
+            overflow: hidden;
+        }
+
+        .isi-trigger {
+            width: 100%;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .isi-trigger::-webkit-details-marker {
+            display: none;
+        }
+
+        .isi-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .isi-trigger svg {
+            width: 20px;
+            height: 20px;
+            color: var(--primary);
+            transition: transform 0.3s;
+        }
+
+        .isi-accordion[open] .isi-trigger svg {
+            transform: rotate(180deg);
+        }
+
+        .isi-content {
+            padding: 0 24px 24px;
+        }
+
+        .isi-section {
+            margin-bottom: 20px;
+        }
+
+        .isi-section:last-of-type {
+            margin-bottom: 24px;
+        }
+
+        .isi-section h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .isi-section p {
+            font-size: 13px;
+            color: var(--text-medium);
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .isi-footer {
+            font-size: 13px;
+            color: var(--text-light);
+            padding-top: 16px;
+            border-top: 1px solid var(--cream-dark);
+        }
+
+        .isi-footer a {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .isi-footer a:hover {
+            text-decoration: underline;
+        }
+
         /* Sticky CTA */
         .sticky-cta {
             position: fixed;
@@ -1678,6 +2067,138 @@
         </div>
     </section>
 
+    <!-- Problem Agitation Section -->
+    <section class="problem-agitation">
+        <div class="container">
+            <div class="problem-content">
+                <h2>You Miss the Way You Used to Feel</h2>
+                <div class="problem-grid">
+                    <div class="problem-item">
+                        <div class="problem-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+                        </div>
+                        <div class="problem-text">
+                            <h4>Desire Has Faded</h4>
+                            <p>You still love your partner, but the physical spark that used to come naturally now feels like a distant memory. It's frustrating and confusing.</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                        </div>
+                        <div class="problem-text">
+                            <h4>Relationship Strain</h4>
+                            <p>Intimacy has become a source of anxiety instead of connection. You worry about your relationship even though everything else feels right.</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5l6.74-6.76zM16 8L2 22M17.5 15H9"/></svg>
+                        </div>
+                        <div class="problem-text">
+                            <h4>Not Just "In Your Head"</h4>
+                            <p>You've been told it's stress, hormones, or normal aging. But low libido is a real medical condition — and it's treatable.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="problem-solution">
+                    <p><strong>You're not alone:</strong> Up to 1 in 3 women experience low libido. PT-141 (bremelanotide) is FDA-approved to help premenopausal women with HSDD rediscover their desire.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical Proof Section -->
+    <section class="clinical-proof">
+        <div class="container">
+            <div class="proof-header">
+                <span class="proof-eyebrow">Clinically Proven</span>
+                <h2>FDA-Approved for Low Libido</h2>
+                <p class="proof-citation">Based on the RECONNECT clinical trials for HSDD treatment</p>
+            </div>
+
+            <div class="proof-stats-grid">
+                <div class="proof-stat-card">
+                    <div class="proof-stat-number">FDA</div>
+                    <div class="proof-stat-label">approved for HSDD treatment</div>
+                    <div class="proof-stat-source">Approved 2019</div>
+                </div>
+                <div class="proof-stat-card">
+                    <div class="proof-stat-number">25%</div>
+                    <div class="proof-stat-label">increase in satisfying sexual events</div>
+                    <div class="proof-stat-source">RECONNECT Trials</div>
+                </div>
+                <div class="proof-stat-card">
+                    <div class="proof-stat-number">35%</div>
+                    <div class="proof-stat-label">reduction in distress about low desire</div>
+                    <div class="proof-stat-source">vs. placebo</div>
+                </div>
+                <div class="proof-stat-card">
+                    <div class="proof-stat-number">45min</div>
+                    <div class="proof-stat-label">to feel effects — use as needed</div>
+                    <div class="proof-stat-source">On-demand dosing</div>
+                </div>
+            </div>
+
+            <div class="proof-cta">
+                <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/210557s000lbl.pdf" target="_blank" class="proof-link">View FDA prescribing information →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Amie Promise (Trust Section) -->
+    <section class="brand-promise">
+        <div class="container">
+            <div class="promise-inner">
+                <div class="promise-content">
+                    <span class="promise-eyebrow">The Amie Promise</span>
+                    <h2>Your Intimate Health, Your Privacy</h2>
+                    <p>We understand that discussing intimate health can feel vulnerable. That's why Amie was designed from the ground up to be judgment-free and completely private. Our physicians specialize in women's sexual health and understand what you're going through.</p>
+                    <p>Every consultation is confidential, your medication arrives in discreet packaging, and our care team is here to support you every step of the way.</p>
+                </div>
+
+                <div class="promise-credentials">
+                    <div class="credential-item">
+                        <div class="credential-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                        </div>
+                        <div class="credential-text">
+                            <strong>Sexual Health Experts</strong>
+                            <span>Physicians trained in women's intimate wellness</span>
+                        </div>
+                    </div>
+                    <div class="credential-item">
+                        <div class="credential-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                        </div>
+                        <div class="credential-text">
+                            <strong>Discreet Packaging</strong>
+                            <span>Plain box, no medication names visible</span>
+                        </div>
+                    </div>
+                    <div class="credential-item">
+                        <div class="credential-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                        </div>
+                        <div class="credential-text">
+                            <strong>100% Confidential</strong>
+                            <span>HIPAA-compliant, private consultations</span>
+                        </div>
+                    </div>
+                    <div class="credential-item">
+                        <div class="credential-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+                        </div>
+                        <div class="credential-text">
+                            <strong>Money-Back Guarantee</strong>
+                            <span>Full refund if you're not approved</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Lifestyle Gallery -->
     <section class="lifestyle">
         <div class="container">
@@ -1946,6 +2467,42 @@
             <a href="#pricing" class="btn btn-primary">Get Started →</a>
         </div>
     </div>
+
+    <!-- Important Safety Information -->
+    <section class="safety-info">
+        <div class="container">
+            <details class="isi-accordion">
+                <summary class="isi-trigger">
+                    <span class="isi-title">Important Safety Information</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="isi-content">
+                    <div class="isi-section">
+                        <h4>Who should not use PT-141</h4>
+                        <p>Do not use PT-141 (bremelanotide) if you have uncontrolled high blood pressure or cardiovascular disease. Tell your doctor if you are pregnant, planning to become pregnant, or breastfeeding.</p>
+                    </div>
+
+                    <div class="isi-section">
+                        <h4>Possible side effects</h4>
+                        <p><strong>Common side effects</strong> include nausea (most common), flushing, headache, and injection site reactions. Nausea tends to decrease after the first dose.</p>
+                        <p><strong>Serious side effects</strong> may include increased blood pressure. This effect is temporary and usually resolves within 12 hours.</p>
+                    </div>
+
+                    <div class="isi-section">
+                        <h4>How to use PT-141</h4>
+                        <p>PT-141 is injected under the skin at least 45 minutes before anticipated sexual activity. Do not use more than one dose within 24 hours or more than 8 doses per month.</p>
+                    </div>
+
+                    <div class="isi-section">
+                        <h4>Important notes</h4>
+                        <p>PT-141 is FDA-approved for premenopausal women with hypoactive sexual desire disorder (HSDD). It is a prescription medication. Results may vary.</p>
+                    </div>
+
+                    <p class="isi-footer">This is not a complete list of safety information. <a href="/prescribing-info">View full prescribing information</a> or discuss with your Amie physician.</p>
+                </div>
+            </details>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
