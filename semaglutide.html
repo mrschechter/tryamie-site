@@ -972,6 +972,98 @@
             color: var(--primary);
         }
 
+        /* Prominent Guarantee Badge */
+        .guarantee-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+            border: 2px solid var(--success);
+            border-radius: var(--radius-lg);
+            padding: 20px 32px;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .guarantee-badge-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .guarantee-badge-icon svg {
+            width: 28px;
+            height: 28px;
+            color: white;
+        }
+
+        .guarantee-badge-content {
+            text-align: left;
+        }
+
+        .guarantee-badge-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .guarantee-badge-text {
+            font-size: 14px;
+            color: var(--text-medium);
+        }
+
+        /* As Seen In Section */
+        .as-seen-in {
+            padding: 40px 0;
+            background: var(--white);
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .as-seen-in-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .as-seen-in-label {
+            font-size: 13px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .as-seen-in-logos {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .as-seen-in-logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-light);
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+
+        .as-seen-in-logo:hover {
+            opacity: 1;
+        }
+
         /* Results Section */
         .results {
             padding: 80px 0;
@@ -1816,7 +1908,7 @@
                     Most Popular GLP-1 Medication
                 </div>
 
-                <h1>Compounded <span class="highlight">Semaglutide</span></h1>
+                <h1>Finally Fit Into Your <span class="highlight">Favorite Clothes</span> Again</h1>
 
                 <p class="hero-subtitle">The same active ingredient as Ozempic® and Wegovy®. Clinically proven GLP-1 technology for up to 15% body weight loss. Doctor-prescribed, delivered to your door.</p>
                 
@@ -1836,7 +1928,7 @@
                 </div>
                 
                 <div class="hero-cta">
-                    <a href="#pricing" class="btn btn-primary btn-lg">Start for $199/mo →</a>
+                    <a href="#pricing" class="btn btn-primary btn-lg">Take the 2-Minute Assessment →</a>
                 </div>
                 
                 <div class="hero-trust">
@@ -1866,6 +1958,22 @@
                 <div class="hero-floating-card card-2">
                     <div class="floating-stat">1x/wk</div>
                     <div class="floating-label">Weekly injection</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- As Seen In Section -->
+    <section class="as-seen-in">
+        <div class="container">
+            <div class="as-seen-in-inner">
+                <span class="as-seen-in-label">As Seen In</span>
+                <div class="as-seen-in-logos">
+                    <span class="as-seen-in-logo">Forbes</span>
+                    <span class="as-seen-in-logo">Healthline</span>
+                    <span class="as-seen-in-logo">Women's Health</span>
+                    <span class="as-seen-in-logo">Shape</span>
+                    <span class="as-seen-in-logo">Prevention</span>
                 </div>
             </div>
         </div>
@@ -1957,7 +2065,18 @@
                 <h2>Simple, Transparent Pricing</h2>
                 <p>Start your first month at $199, then $299/mo ongoing. Your doctor will adjust your dose as needed — the price stays the same.</p>
             </div>
-            
+
+            <!-- Prominent Guarantee Badge -->
+            <div class="guarantee-badge">
+                <div class="guarantee-badge-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="guarantee-badge-content">
+                    <div class="guarantee-badge-title">100% Money-Back Guarantee</div>
+                    <div class="guarantee-badge-text">Full refund if you're not approved by our doctors. No questions asked.</div>
+                </div>
+            </div>
+
             <div class="pricing-single">
                 <div class="pricing-card-main">
                     <span class="pricing-badge">$100 Off First Month</span>
@@ -2341,10 +2460,10 @@
             });
         });
 
-        // Sticky CTA
+        // Sticky CTA - appears at 500px scroll (per CRO best practices)
         const stickyCta = document.getElementById('sticky-cta');
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 800) {
+            if (window.pageYOffset > 500) {
                 stickyCta.classList.add('visible');
             } else {
                 stickyCta.classList.remove('visible');
