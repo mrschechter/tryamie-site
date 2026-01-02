@@ -80,23 +80,39 @@
 
         /* Urgency Banner */
         .urgency-banner {
-            background: linear-gradient(90deg, var(--urgency) 0%, #D64A3A 100%);
-            color: white;
-            padding: 12px 20px;
+            background: linear-gradient(135deg, var(--urgency) 0%, #C94A3A 100%);
+            color: var(--white);
+            padding: 12px 0;
             text-align: center;
         }
 
         .urgency-banner p {
             font-size: 14px;
             font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
-        .urgency-banner span {
+        .urgency-timer {
             background: rgba(255,255,255,0.2);
-            padding: 2px 10px;
-            border-radius: 4px;
-            margin-left: 8px;
+            padding: 4px 12px;
+            border-radius: 50px;
             font-family: monospace;
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        .urgency-badge {
+            background: var(--white);
+            color: var(--urgency);
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
         }
 
         /* Header */
@@ -313,18 +329,38 @@
             gap: 24px;
         }
 
-        .header-badge {
+        .header-rating {
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 14px;
-            color: var(--text-medium);
         }
 
-        .header-badge svg {
-            width: 18px;
-            height: 18px;
-            color: var(--success);
+        .header-rating .stars {
+            color: var(--gold);
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        .header-rating span {
+            font-size: 14px;
+            color: var(--text-medium);
+            font-weight: 500;
+        }
+
+        .header-customers {
+            font-size: 14px;
+            color: var(--text-medium);
+            font-weight: 500;
+        }
+
+        .header-customers strong {
+            color: var(--primary);
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
         .btn {
@@ -368,6 +404,15 @@
         .btn-lg {
             padding: 18px 36px;
             font-size: 17px;
+        }
+
+        .btn-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 4px 15px rgba(74, 144, 164, 0.3); }
+            50% { box-shadow: 0 4px 25px rgba(74, 144, 164, 0.5); }
         }
 
         /* Hero Section */
@@ -1581,14 +1626,18 @@
 <body>
     <!-- Urgency Banner -->
     <div class="urgency-banner">
-        <p>🔥 Limited Time: $100 OFF your first month — Offer ends <span id="countdown">23:59:59</span></p>
+        <p>
+            <span class="urgency-badge">Limited Time</span>
+            $100 OFF ends in <span class="urgency-timer" id="countdown">23:59:47</span>
+            — Only <strong>17 spots left</strong> this week
+        </p>
     </div>
 
-    <!-- Header -->
+    <!-- Minimal Header -->
     <header class="header">
         <div class="container header-inner">
             <a href="index.html" class="logo">Amie</a>
-            
+
             <nav class="nav">
                 <div class="nav-item">
                     <button class="nav-trigger">
@@ -1599,7 +1648,8 @@
                         <div class="mega-menu-section">
                             <div class="mega-menu-label">GLP-1 Treatments</div>
                             <a href="semaglutide.html" class="menu-item">
-                                <div class="menu-item-icon">
+                                <div class="menu-item-icon weight-loss">
+                                    <span class="menu-item-badge">Popular</span>
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
                                 </div>
                                 <div class="menu-item-content">
@@ -1609,8 +1659,7 @@
                                 <div class="menu-item-price">$199/mo</div>
                             </a>
                             <a href="tirzepatide.html" class="menu-item">
-                                <div class="menu-item-icon">
-                                    <span class="menu-item-badge">Popular</span>
+                                <div class="menu-item-icon weight-loss">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                                 </div>
                                 <div class="menu-item-content">
@@ -1620,7 +1669,7 @@
                                 <div class="menu-item-price">$249/mo</div>
                             </a>
                             <a href="oral-semaglutide.html" class="menu-item">
-                                <div class="menu-item-icon">
+                                <div class="menu-item-icon weight-loss">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
                                 </div>
                                 <div class="menu-item-content">
@@ -1632,7 +1681,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="nav-item">
                     <button class="nav-trigger">
                         Health & Wellness
@@ -1681,20 +1730,34 @@
                                         <div class="menu-item-desc">Growth hormone support</div>
                                     </div>
                                 </a>
+                                <a href="naltrexone.html" class="menu-item">
+                                    <div class="menu-item-icon wellness">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                    </div>
+                                    <div class="menu-item-content">
+                                        <div class="menu-item-title">Naltrexone</div>
+                                        <div class="menu-item-desc">Manage alcohol cravings</div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </nav>
-            
+
             <div class="header-trust">
-                <div class="header-badge">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                    US Licensed Physicians
+                <div class="header-rating">
+                    <span class="stars">★★★★★</span>
+                    <span>4.8 on Trustpilot</span>
+                </div>
+                <div class="header-customers">
+                    <strong>50,000+</strong> happy customers
                 </div>
             </div>
-            
-            <a href="#pricing" class="btn btn-primary">Get Started</a>
+
+            <div class="header-cta">
+                <a href="#pricing" class="btn btn-primary btn-pulse">Get $100 Off →</a>
+            </div>
         </div>
     </header>
 
