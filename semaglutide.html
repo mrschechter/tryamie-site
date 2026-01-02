@@ -1907,6 +1907,122 @@
             font-weight: 600;
         }
 
+        /* UGC Gallery Section */
+        .ugc-section {
+            padding: 80px 0;
+            background: var(--cream);
+        }
+
+        .ugc-section .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .ugc-section .section-header h2 {
+            font-size: 36px;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .ugc-section .section-subtitle {
+            font-size: 17px;
+            color: var(--text-medium);
+            margin-bottom: 8px;
+        }
+
+        .ugc-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .ugc-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 1;
+            background: var(--cream-dark);
+        }
+
+        .ugc-item.featured {
+            grid-column: span 2;
+            aspect-ratio: 2/1;
+        }
+
+        .ugc-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .ugc-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .ugc-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 16px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .ugc-item:hover .ugc-overlay {
+            opacity: 1;
+        }
+
+        .ugc-name {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+
+        .ugc-result {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .ugc-cta {
+            text-align: center;
+            margin-top: 32px;
+            font-size: 15px;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .ugc-cta a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .ugc-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ugc-item.featured {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ugc-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ugc-item.featured {
+                grid-column: span 1;
+                aspect-ratio: 16/9;
+            }
+        }
+
         /* Footer */
         .footer {
             background: #1E2D32;
@@ -2846,13 +2962,63 @@
         </div>
     </section>
 
+    <!-- UGC Gallery -->
+    <section class="ugc-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Real Women. Real Results.</h2>
+                <p class="section-subtitle">Join thousands who've transformed their health with Amie</p>
+            </div>
+
+            <div class="ugc-grid">
+                <div class="ugc-item featured">
+                    <img src="images/lifestyle/semaglutide-confidence.png" alt="Customer showing weight loss results">
+                    <div class="ugc-overlay">
+                        <div class="ugc-name">Michelle J.</div>
+                        <div class="ugc-result">Lost 47 lbs in 5 months</div>
+                    </div>
+                </div>
+                <div class="ugc-item">
+                    <img src="images/lifestyle/semaglutide-active.png" alt="Active lifestyle after weight loss">
+                    <div class="ugc-overlay">
+                        <div class="ugc-name">Rachel K.</div>
+                        <div class="ugc-result">Lost 62 lbs in 7 months</div>
+                    </div>
+                </div>
+                <div class="ugc-item">
+                    <img src="images/lifestyle/semaglutide-morning.png" alt="Morning routine with Amie">
+                    <div class="ugc-overlay">
+                        <div class="ugc-name">Diana T.</div>
+                        <div class="ugc-result">Lost 38 lbs in 4 months</div>
+                    </div>
+                </div>
+                <div class="ugc-item">
+                    <img src="images/lifestyle/weight-loss-confidence.png" alt="Confident woman after weight loss">
+                    <div class="ugc-overlay">
+                        <div class="ugc-name">Sarah M.</div>
+                        <div class="ugc-result">Lost 52 lbs in 6 months</div>
+                    </div>
+                </div>
+                <div class="ugc-item">
+                    <img src="images/lifestyle/weight-loss-active.png" alt="Woman staying active">
+                    <div class="ugc-overlay">
+                        <div class="ugc-name">Jennifer L.</div>
+                        <div class="ugc-result">Lost 35 lbs in 4 months</div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="ugc-cta">Share your journey with us <a href="#">@tryamie</a></p>
+        </div>
+    </section>
+
     <!-- FAQ -->
     <section class="faq">
         <div class="container">
             <div class="section-header">
                 <h2>Frequently Asked Questions</h2>
             </div>
-            
+
             <div class="faq-grid">
                 <div class="faq-item">
                     <button class="faq-question">
