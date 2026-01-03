@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep, Hormones, and Weight: The Connection You're Missing | Amie Blog</title>
+    <meta name="description" content="Discover how sleep affects your hormones and weight loss. Learn why poor sleep sabotages weight loss efforts and what to do about it.">
+    <meta name="keywords" content="sleep weight loss, hormones sleep, cortisol weight gain, leptin ghrelin, sleep metabolism, insomnia weight gain">
+    <link rel="canonical" href="https://tryamie.com/blog/sleep-hormones-weight.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sleep, Hormones, and Weight: The Connection You're Missing">
+    <meta property="og:description" content="Discover how sleep affects your hormones and weight loss goals.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://tryamie.com/blog/sleep-hormones-weight.html">
+
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Sleep, Hormones, and Weight: The Connection You're Missing",
+        "description": "Discover how sleep affects your hormones and weight loss.",
+        "author": {
+            "@type": "Organization",
+            "name": "Amie"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Amie"
+        },
+        "datePublished": "2024-01-14",
+        "dateModified": "2024-01-14"
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-pink: #d4a5a5;
+            --primary-pink-light: #f5e6e6;
+            --primary-pink-dark: #c49393;
+            --sage-green: #9caf88;
+            --sage-green-light: #e8f0e3;
+            --warm-ivory: #faf8f5;
+            --text-dark: #2d2d2d;
+            --text-medium: #5a5a5a;
+            --text-light: #888888;
+            --white: #ffffff;
+            --border-light: #e8e8e8;
+            --night-purple: #6b5b95;
+            --night-purple-light: #e8e4f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--warm-ivory);
+        }
+
+        /* Header */
+        .header {
+            background: var(--white);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-pink);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-pink);
+        }
+
+        /* Article Layout */
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .breadcrumb {
+            margin-bottom: 2rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-pink);
+            text-decoration: none;
+        }
+
+        .article-meta {
+            margin-bottom: 2rem;
+        }
+
+        .category-tag {
+            display: inline-block;
+            background: var(--night-purple-light);
+            color: var(--night-purple);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .article-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-medium);
+            margin-bottom: 1.5rem;
+        }
+
+        .author-date {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Featured Image */
+        .featured-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, var(--night-purple-light), var(--primary-pink-light));
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--night-purple);
+        }
+
+        .toc h3 {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .toc ul {
+            list-style: none;
+        }
+
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc a {
+            color: var(--text-medium);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .toc a:hover {
+            color: var(--night-purple);
+        }
+
+        /* Article Content */
+        .article-content h2 {
+            font-size: 1.75rem;
+            margin: 2.5rem 0 1rem;
+            color: var(--text-dark);
+        }
+
+        .article-content h3 {
+            font-size: 1.35rem;
+            margin: 2rem 0 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            color: var(--text-medium);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .article-content ul, .article-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+            color: var(--text-medium);
+            font-size: 1.1rem;
+        }
+
+        .article-content a {
+            color: var(--night-purple);
+            text-decoration: underline;
+        }
+
+        /* Hormone Cards */
+        .hormone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .hormone-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-top: 4px solid var(--night-purple);
+        }
+
+        .hormone-card h4 {
+            color: var(--night-purple);
+            margin-bottom: 0.5rem;
+        }
+
+        .hormone-card .subtitle {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 0.75rem;
+        }
+
+        .hormone-card p {
+            color: var(--text-medium);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* Stats Box */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-box {
+            background: var(--night-purple);
+            color: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-box .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-box .label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Tips Box */
+        .tips-box {
+            background: var(--night-purple-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .tips-box h3 {
+            color: var(--night-purple);
+            margin-bottom: 1rem;
+        }
+
+        .tip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .tip-item {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .tip-item h4 {
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tip-item p {
+            color: var(--text-medium);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        /* Timeline */
+        .sleep-timeline {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .sleep-timeline h3 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .time-badge {
+            background: var(--night-purple);
+            color: var(--white);
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
+        .timeline-content h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-medium);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: var(--sage-green-light);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--sage-green);
+        }
+
+        .info-box h4 {
+            color: var(--sage-green);
+            margin-bottom: 0.75rem;
+        }
+
+        .info-box p {
+            color: var(--text-medium);
+            margin-bottom: 0;
+        }
+
+        /* CTA Box */
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary-pink), var(--primary-pink-dark));
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            color: var(--white);
+            margin: 2rem 0;
+        }
+
+        .cta-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .cta-box p {
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+            color: var(--white);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary-pink-dark);
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .faq-section h2 {
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-light);
+            padding: 1rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-answer {
+            color: var(--text-medium);
+        }
+
+        /* Related Posts */
+        .related-posts {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .related-posts h3 {
+            margin-bottom: 1.5rem;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .related-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .related-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .related-card h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .related-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer h4 {
+            margin-bottom: 1rem;
+            color: var(--primary-pink-light);
+        }
+
+        .footer a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .featured-image {
+                height: 250px;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">amie</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../semaglutide.html">Weight Loss</a></li>
+                    <li><a href="../hrt.html">HRT</a></li>
+                    <li><a href="../little-pink-pill.html">Libido</a></li>
+                    <li><a href="index.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="article-container">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="index.html">Blog</a> / <a href="index.html?category=wellness">Wellness</a> / Sleep, Hormones, and Weight
+        </nav>
+
+        <!-- Article Meta -->
+        <div class="article-meta">
+            <span class="category-tag">Wellness</span>
+            <h1>Sleep, Hormones, and Weight: The Connection You're Missing</h1>
+            <p class="article-subtitle">Why sleep might be the missing link in your health goals</p>
+            <div class="author-date">
+                <span>By Amie Health Team</span>
+                <span>|</span>
+                <span>January 14, 2024</span>
+                <span>|</span>
+                <span class="reading-time">8 min read</span>
+            </div>
+        </div>
+
+        <!-- Featured Image -->
+        <div class="featured-image" role="img" aria-label="Peaceful bedroom with calm lighting"></div>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h3>In This Article</h3>
+            <ul>
+                <li><a href="#sleep-weight">Sleep and Weight: The Data</a></li>
+                <li><a href="#hormones">The Hormones Involved</a></li>
+                <li><a href="#menopause">Sleep and Menopause</a></li>
+                <li><a href="#glp1">Sleep on GLP-1 Medications</a></li>
+                <li><a href="#improve">How to Improve Your Sleep</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+
+        <!-- Article Content -->
+        <article class="article-content">
+            <p>You're eating right. You're exercising. Maybe you're even taking <a href="what-is-semaglutide.html">GLP-1 medication</a>. But there's one factor that can undermine all your efforts: sleep.</p>
+
+            <p>Research consistently shows that sleep is one of the most powerful levers for weight management, hormone balance, and overall health. Yet it's often the first thing we sacrifice when life gets busy.</p>
+
+            <div class="stats-row">
+                <div class="stat-box">
+                    <span class="number">55%</span>
+                    <span class="label">more fat loss with adequate sleep</span>
+                </div>
+                <div class="stat-box">
+                    <span class="number">7-9</span>
+                    <span class="label">hours recommended for adults</span>
+                </div>
+                <div class="stat-box">
+                    <span class="number">45%</span>
+                    <span class="label">of women report sleep issues</span>
+                </div>
+            </div>
+
+            <h2 id="sleep-weight">Sleep and Weight: What the Research Shows</h2>
+
+            <p>The connection between sleep and weight isn't just correlation, it's causation. Studies consistently demonstrate:</p>
+
+            <ul>
+                <li><strong>Short sleepers (< 6 hours) are 30% more likely to be obese</strong> than those sleeping 7-8 hours</li>
+                <li><strong>Sleep-deprived dieters lose 55% less fat</strong> than well-rested dieters, even with the same calorie intake</li>
+                <li><strong>One night of poor sleep increases hunger</strong> and cravings the next day</li>
+                <li><strong>Chronic sleep deprivation leads to insulin resistance</strong>, promoting fat storage</li>
+            </ul>
+
+            <p>Even if you're doing everything else right, inadequate sleep can sabotage your progress.</p>
+
+            <h2 id="hormones">The Hormones Involved</h2>
+
+            <p>Sleep affects nearly every hormone in your body. Here are the key players for weight and metabolism:</p>
+
+            <div class="hormone-grid">
+                <div class="hormone-card">
+                    <h4>Leptin</h4>
+                    <div class="subtitle">"The Satiety Hormone"</div>
+                    <p>Tells your brain you're full. Sleep deprivation lowers leptin levels by 15-20%, making you feel hungrier even when you've eaten enough.</p>
+                </div>
+                <div class="hormone-card">
+                    <h4>Ghrelin</h4>
+                    <div class="subtitle">"The Hunger Hormone"</div>
+                    <p>Signals hunger to your brain. Poor sleep increases ghrelin by 15-30%, amplifying appetite and cravings, especially for carbs.</p>
+                </div>
+                <div class="hormone-card">
+                    <h4>Cortisol</h4>
+                    <div class="subtitle">"The Stress Hormone"</div>
+                    <p>Should be low at night, high in the morning. Sleep deprivation disrupts this rhythm, promoting fat storage, especially belly fat.</p>
+                </div>
+                <div class="hormone-card">
+                    <h4>Insulin</h4>
+                    <div class="subtitle">"The Storage Hormone"</div>
+                    <p>Regulates blood sugar. Just one week of poor sleep can reduce insulin sensitivity by 30%, similar to pre-diabetes.</p>
+                </div>
+                <div class="hormone-card">
+                    <h4>Growth Hormone</h4>
+                    <div class="subtitle">"The Repair Hormone"</div>
+                    <p>Released during deep sleep. Essential for muscle maintenance, fat burning, and tissue repair. Poor sleep = less GH.</p>
+                </div>
+                <div class="hormone-card">
+                    <h4>Estrogen & Progesterone</h4>
+                    <div class="subtitle">"The Female Hormones"</div>
+                    <p>Fluctuate with sleep quality. Poor sleep during perimenopause can worsen hormonal imbalances and symptoms.</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h4>The Vicious Cycle</h4>
+                <p>Poor sleep disrupts hormones → hormonal imbalance affects sleep → cycle continues. Breaking this cycle often requires addressing both sleep hygiene and hormonal factors simultaneously.</p>
+            </div>
+
+            <h2 id="menopause">Sleep and Menopause</h2>
+
+            <p>If you're in <a href="perimenopause-symptoms-guide.html">perimenopause</a> or menopause, you may have noticed sleep becoming more difficult. This isn't your imagination:</p>
+
+            <ul>
+                <li><strong>Hot flashes and night sweats</strong> disrupt sleep cycles</li>
+                <li><strong>Declining progesterone</strong> (a natural sleep aid) affects sleep quality</li>
+                <li><strong>Mood changes</strong> like anxiety can make falling asleep harder</li>
+                <li><strong>Increased stress sensitivity</strong> compounds the problem</li>
+            </ul>
+
+            <p><a href="hrt-benefits-risks.html">Hormone replacement therapy</a> often improves sleep significantly by addressing these root causes, particularly night sweats and the progesterone decline.</p>
+
+            <h2 id="glp1">Sleep on GLP-1 Medications</h2>
+
+            <p>If you're taking semaglutide or tirzepatide, sleep may actually improve over time:</p>
+
+            <ul>
+                <li><strong>Weight loss reduces sleep apnea</strong>, a common sleep disruptor</li>
+                <li><strong>Stable blood sugar</strong> means fewer nighttime wake-ups</li>
+                <li><strong>Reduced late-night eating</strong> improves sleep quality</li>
+            </ul>
+
+            <p>However, during the adjustment period, some people experience <a href="glp1-side-effects.html">side effects</a> like nausea that can temporarily affect sleep. This typically resolves as your body adjusts.</p>
+
+            <h2 id="improve">How to Improve Your Sleep</h2>
+
+            <div class="sleep-timeline">
+                <h3>Optimize Your Evening for Better Sleep</h3>
+
+                <div class="timeline-item">
+                    <div class="time-badge">3-4 PM</div>
+                    <div class="timeline-content">
+                        <h4>Cut the Caffeine</h4>
+                        <p>Caffeine has a 6-hour half-life. Your afternoon coffee is still affecting you at midnight.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time-badge">6-7 PM</div>
+                    <div class="timeline-content">
+                        <h4>Finish Eating</h4>
+                        <p>Allow 2-3 hours between your last meal and bed. Late eating disrupts sleep architecture.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time-badge">8 PM</div>
+                    <div class="timeline-content">
+                        <h4>Dim the Lights</h4>
+                        <p>Start reducing light exposure. Bright lights suppress melatonin production.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time-badge">9 PM</div>
+                    <div class="timeline-content">
+                        <h4>Screen Curfew</h4>
+                        <p>Put away phones, tablets, and computers. Blue light is especially disruptive.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time-badge">9:30 PM</div>
+                    <div class="timeline-content">
+                        <h4>Wind-Down Routine</h4>
+                        <p>Read, stretch, journal, or practice relaxation. Signal to your body that it's time to sleep.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time-badge">10 PM</div>
+                    <div class="timeline-content">
+                        <h4>Consistent Bedtime</h4>
+                        <p>Go to bed at the same time every night, even weekends. Consistency is key.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tips-box">
+                <h3>Sleep Environment Optimization</h3>
+                <div class="tip-grid">
+                    <div class="tip-item">
+                        <h4>Temperature</h4>
+                        <p>Keep bedroom cool: 65-68°F (18-20°C) is optimal for most people.</p>
+                    </div>
+                    <div class="tip-item">
+                        <h4>Darkness</h4>
+                        <p>Use blackout curtains or an eye mask. Even small amounts of light disrupt sleep.</p>
+                    </div>
+                    <div class="tip-item">
+                        <h4>Quiet</h4>
+                        <p>Use white noise or earplugs if needed. Consistent sound is better than variable.</p>
+                    </div>
+                    <div class="tip-item">
+                        <h4>Comfortable Bedding</h4>
+                        <p>Invest in a good mattress and pillows. You spend 1/3 of your life in bed.</p>
+                    </div>
+                    <div class="tip-item">
+                        <h4>No Screens in Bed</h4>
+                        <p>Reserve the bed for sleep only. Train your brain that bed = sleep.</p>
+                    </div>
+                    <div class="tip-item">
+                        <h4>Keep It Cool for Hot Flashes</h4>
+                        <p>Cooling sheets, fans, and light pajamas can help with night sweats.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Supplements That May Help</h3>
+
+            <p>Consider these evidence-based options (always consult your provider):</p>
+
+            <ul>
+                <li><strong>Magnesium glycinate:</strong> Calms the nervous system, helps muscle relaxation</li>
+                <li><strong>Melatonin (low dose):</strong> 0.5-3mg can help reset circadian rhythm</li>
+                <li><strong>L-theanine:</strong> Promotes relaxation without sedation</li>
+                <li><strong>Glycine:</strong> May lower core body temperature for deeper sleep</li>
+            </ul>
+
+            <h3>When to Seek Help</h3>
+
+            <p>If you've optimized your sleep hygiene and still struggle, consider:</p>
+
+            <ul>
+                <li><strong>Sleep apnea screening:</strong> Very common and often undiagnosed</li>
+                <li><strong>Hormone evaluation:</strong> Especially if you're perimenopausal or menopausal</li>
+                <li><strong>Thyroid testing:</strong> Both hyper and hypothyroid conditions affect sleep</li>
+                <li><strong>Medication review:</strong> Some medications interfere with sleep</li>
+            </ul>
+
+            <div class="cta-box">
+                <h3>Hormones Affecting Your Sleep?</h3>
+                <p>Hormonal imbalances are a common cause of sleep issues. Let's find out if HRT could help.</p>
+                <a href="../hrt.html" class="cta-button">Explore Hormone Therapy</a>
+            </div>
+
+            <h2 id="faq">Frequently Asked Questions</h2>
+
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">How much sleep do I actually need?</div>
+                    <div class="faq-answer">Most adults need 7-9 hours. You likely need more if you wake up tired, depend on caffeine, or feel sleepy during the day. Some people genuinely function on less, but this is rare.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I catch up on sleep on weekends?</div>
+                    <div class="faq-answer">Partially. "Sleep debt" can be partially repaid, but inconsistent schedules disrupt your circadian rhythm, making weekday sleep worse. Aim for consistency instead.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Why do I wake up at 3-4 AM?</div>
+                    <div class="faq-answer">Common causes include blood sugar drops (eating too early/light), cortisol dysregulation, alcohol consumption, sleep apnea, or hormonal fluctuations (especially perimenopause). A provider can help identify your cause.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Does alcohol help me sleep?</div>
+                    <div class="faq-answer">No. While alcohol may help you fall asleep, it severely disrupts sleep quality. It suppresses REM sleep, causes fragmented sleep, and worsens sleep apnea. Reducing <a href="naltrexone-alcohol-cravings.html">alcohol consumption</a> often dramatically improves sleep.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Is melatonin safe to take long-term?</div>
+                    <div class="faq-answer">Low-dose melatonin (0.5-3mg) is generally considered safe for extended use. Higher doses aren't necessarily more effective. It works best for circadian rhythm issues, not necessarily for staying asleep.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can exercise help with sleep?</div>
+                    <div class="faq-answer">Yes, <a href="exercise-on-glp1.html">regular exercise</a> significantly improves sleep quality. However, intense exercise close to bedtime can be stimulating. Try to finish workouts 3-4 hours before bed.</div>
+                </div>
+            </div>
+
+            <!-- Related Posts -->
+            <div class="related-posts">
+                <h3>Related Articles</h3>
+                <div class="related-grid">
+                    <a href="hrt-benefits-risks.html" class="related-card">
+                        <h4>HRT Benefits and Risks</h4>
+                        <p>How hormone therapy can improve sleep</p>
+                    </a>
+                    <a href="perimenopause-symptoms-guide.html" class="related-card">
+                        <h4>Perimenopause Symptoms Guide</h4>
+                        <p>Understanding hormonal changes and sleep</p>
+                    </a>
+                    <a href="weight-loss-plateau-glp1.html" class="related-card">
+                        <h4>Breaking Weight Loss Plateaus</h4>
+                        <p>Sleep optimization can restart progress</p>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h4>Treatments</h4>
+                <a href="../semaglutide.html">Semaglutide</a>
+                <a href="../tirzepatide.html">Tirzepatide</a>
+                <a href="../hrt.html">Hormone Therapy</a>
+                <a href="../little-pink-pill.html">Libido Support</a>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <a href="index.html">Blog</a>
+                <a href="../faq.html">FAQ</a>
+                <a href="../how-it-works.html">How It Works</a>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <a href="../about.html">About Us</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../privacy.html">Privacy Policy</a>
+                <a href="../terms.html">Terms of Service</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Amie. All rights reserved. | For educational purposes only. Consult your healthcare provider.</p>
+        </div>
+    </footer>
+</body>
+</html>

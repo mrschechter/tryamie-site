@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Wellness Blog | Try Amie</title>
+    <meta name="description" content="Expert insights on weight loss, GLP-1 medications, hormone therapy, and wellness. Science-backed articles from the Try Amie medical team.">
+    <meta name="keywords" content="weight loss blog, semaglutide guide, tirzepatide information, GLP-1 medications, HRT blog, women's health">
+    <link rel="canonical" href="https://tryamie.com/blog/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Health & Wellness Blog | Try Amie">
+    <meta property="og:description" content="Expert insights on weight loss, GLP-1 medications, hormone therapy, and wellness.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tryamie.com/blog/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- Schema.org Blog markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Try Amie Health Blog",
+        "description": "Expert insights on weight loss, GLP-1 medications, hormone therapy, and wellness.",
+        "url": "https://tryamie.com/blog/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Try Amie",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://tryamie.com/images/logo.png"
+            }
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #4A90A4;
+            --primary-light: #6BA8B9;
+            --primary-dark: #3A7A8E;
+            --primary-deeper: #2D6070;
+            --accent: #E8B4A0;
+            --accent-light: #F5D5C8;
+            --accent-dark: #D9A08A;
+            --cream: #FDF8F5;
+            --cream-dark: #F5EDE8;
+            --white: #ffffff;
+            --text-dark: #1a1a1a;
+            --text-medium: #4a4a4a;
+            --text-light: #6a6a6a;
+            --gold: #D4A853;
+            --success: #5BB98C;
+            --urgency: #E85D4C;
+            --shadow-sm: 0 2px 8px rgba(74, 144, 164, 0.08);
+            --shadow-md: 0 4px 20px rgba(74, 144, 164, 0.12);
+            --shadow-lg: 0 8px 40px rgba(74, 144, 164, 0.16);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-xl: 32px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--white);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav a {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-medium);
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            background: var(--primary);
+            color: var(--white) !important;
+            padding: 12px 24px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        /* Blog Hero */
+        .blog-hero {
+            padding: 80px 0 60px;
+            background: linear-gradient(180deg, var(--white) 0%, var(--cream) 100%);
+            text-align: center;
+        }
+
+        .blog-hero h1 {
+            font-size: clamp(36px, 5vw, 52px);
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .blog-hero p {
+            font-size: 18px;
+            color: var(--text-medium);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Category Filter */
+        .category-filter {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            padding: 10px 20px;
+            background: var(--white);
+            border: 1px solid var(--cream-dark);
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-medium);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        /* Blog Grid */
+        .blog-grid {
+            padding: 60px 0 100px;
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        /* Featured Post */
+        .featured-post {
+            grid-column: span 3;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 20px;
+        }
+
+        .featured-post .post-image {
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .featured-post .post-content {
+            padding: 40px 40px 40px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .featured-post h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+
+        .featured-post p {
+            color: var(--text-medium);
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        /* Post Card */
+        .post-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s;
+        }
+
+        .post-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .post-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .post-image-placeholder {
+            font-size: 48px;
+            opacity: 0.5;
+        }
+
+        .post-category {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--white);
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--primary);
+        }
+
+        .post-content {
+            padding: 24px;
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .post-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        .post-card h3 a:hover {
+            color: var(--primary);
+        }
+
+        .post-excerpt {
+            color: var(--text-medium);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 14px;
+            transition: gap 0.2s;
+        }
+
+        .read-more:hover {
+            gap: 12px;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            background: var(--primary);
+            padding: 80px 0;
+        }
+
+        .newsletter-inner {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            color: var(--white);
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .newsletter p {
+            color: rgba(255,255,255,0.8);
+            font-size: 16px;
+            margin-bottom: 32px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 12px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 16px 20px;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        .newsletter-form button {
+            padding: 16px 32px;
+            background: var(--accent);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--accent-dark);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-inner {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+            line-height: 1.7;
+            max-width: 300px;
+        }
+
+        .footer-title {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .posts-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .featured-post {
+                grid-column: span 2;
+                grid-template-columns: 1fr;
+            }
+
+            .featured-post .post-image {
+                min-height: 280px;
+            }
+
+            .featured-post .post-content {
+                padding: 32px;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+
+            .footer-brand {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .posts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-post {
+                grid-column: span 1;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .category-filter {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 10px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-brand {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="../index.html" class="logo">Amie</a>
+                <nav class="nav">
+                    <a href="../index.html">Home</a>
+                    <a href="../semaglutide.html">Weight Loss</a>
+                    <a href="../hrt.html">HRT</a>
+                    <a href="index.html" style="color: var(--primary);">Blog</a>
+                    <a href="../index.html#pricing" class="nav-cta">Get Started</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Health & Wellness Insights</h1>
+            <p>Evidence-based articles on weight loss, hormone therapy, and living your healthiest life. Written by our medical team.</p>
+
+            <div class="category-filter">
+                <button class="category-btn active">All Posts</button>
+                <button class="category-btn">Weight Loss</button>
+                <button class="category-btn">GLP-1 Medications</button>
+                <button class="category-btn">Hormone Health</button>
+                <button class="category-btn">Wellness</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-grid">
+        <div class="container">
+            <div class="posts-grid">
+
+                <!-- Featured Post -->
+                <article class="featured-post">
+                    <div class="post-image" style="background: linear-gradient(135deg, #6BA8B9 0%, #3A7A8E 100%);">
+                        <span class="post-image-placeholder">💉</span>
+                    </div>
+                    <div class="post-content">
+                        <span class="featured-badge">Featured</span>
+                        <h2><a href="semaglutide-vs-tirzepatide.html">Semaglutide vs Tirzepatide: Which GLP-1 Is Right for You?</a></h2>
+                        <p>Both medications help with weight loss, but they work differently. We break down the science, compare results from clinical trials, and help you understand which might be the better choice for your goals.</p>
+                        <a href="semaglutide-vs-tirzepatide.html" class="read-more">Read Full Article →</a>
+                    </div>
+                </article>
+
+                <!-- Post 1 -->
+                <article class="post-card">
+                    <div class="post-image" style="background: linear-gradient(135deg, #7BBAC9 0%, #5A9AAA 100%);">
+                        <span class="post-category">Weight Loss</span>
+                        <span class="post-image-placeholder">⚖️</span>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span>📅 Jan 2, 2026</span>
+                            <span>⏱️ 8 min read</span>
+                        </div>
+                        <h3><a href="what-is-semaglutide.html">What Is Semaglutide? Complete Guide to the Weight Loss Medication</a></h3>
+                        <p class="post-excerpt">Everything you need to know about semaglutide: how it works, expected results, side effects, and whether you're a good candidate.</p>
+                        <a href="what-is-semaglutide.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="post-card">
+                    <div class="post-image" style="background: linear-gradient(135deg, #B8A0D9 0%, #9580C0 100%);">
+                        <span class="post-category">Hormone Health</span>
+                        <span class="post-image-placeholder">🌸</span>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span>📅 Dec 30, 2025</span>
+                            <span>⏱️ 10 min read</span>
+                        </div>
+                        <h3><a href="perimenopause-symptoms-guide.html">Perimenopause Symptoms: What's Normal and When to Seek Help</a></h3>
+                        <p class="post-excerpt">Hot flashes, mood swings, weight gain—perimenopause brings many changes. Learn what to expect and treatment options.</p>
+                        <a href="perimenopause-symptoms-guide.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="post-card">
+                    <div class="post-image" style="background: linear-gradient(135deg, #E8B4A0 0%, #D9A08A 100%);">
+                        <span class="post-category">GLP-1</span>
+                        <span class="post-image-placeholder">📊</span>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span>📅 Dec 28, 2025</span>
+                            <span>⏱️ 7 min read</span>
+                        </div>
+                        <h3><a href="glp1-side-effects.html">GLP-1 Side Effects: What to Expect and How to Manage Them</a></h3>
+                        <p class="post-excerpt">Nausea, constipation, fatigue—common side effects and proven strategies to minimize discomfort during treatment.</p>
+                        <a href="glp1-side-effects.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Post 4 -->
+                <article class="post-card">
+                    <div class="post-image" style="background: linear-gradient(135deg, #5BB98C 0%, #4A9E78 100%);">
+                        <span class="post-category">Wellness</span>
+                        <span class="post-image-placeholder">🥗</span>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span>📅 Dec 26, 2025</span>
+                            <span>⏱️ 6 min read</span>
+                        </div>
+                        <h3><a href="diet-on-glp1.html">What to Eat on GLP-1 Medications: A Nutrition Guide</a></h3>
+                        <p class="post-excerpt">Maximize your results with the right diet. Foods to prioritize, what to avoid, and meal planning tips.</p>
+                        <a href="diet-on-glp1.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Post 5 -->
+                <article class="post-card">
+                    <div class="post-image" style="background: linear-gradient(135deg, #6BA8B9 0%, #4A90A4 100%);">
+                        <span class="post-category">Weight Loss</span>
+                        <span class="post-image-placeholder">💊</span>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span>📅 Dec 24, 2025</span>
+                            <span>⏱️ 9 min read</span>
+                        </div>
+                        <h3><a href="compounded-vs-brand-semaglutide.html">Compounded vs Brand-Name Semaglutide: What's the Difference?</a></h3>
+                        <p class="post-excerpt">Understanding the differences between Ozempic/Wegovy and compounded semaglutide. Safety, efficacy, and cost compared.</p>
+                        <a href="compounded-vs-brand-semaglutide.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Post 6 -->
+                <article class="post-card">
+                    <div class="post-image" style="background: linear-gradient(135deg, #D4A853 0%, #B8903D 100%);">
+                        <span class="post-category">Hormone Health</span>
+                        <span class="post-image-placeholder">⚡</span>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span>📅 Dec 22, 2025</span>
+                            <span>⏱️ 8 min read</span>
+                        </div>
+                        <h3><a href="hrt-benefits-risks.html">HRT Benefits and Risks: What Every Woman Should Know</a></h3>
+                        <p class="post-excerpt">The latest research on hormone replacement therapy, including cardiovascular health, bone density, and quality of life.</p>
+                        <a href="hrt-benefits-risks.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Post 7 -->
+                <article class="post-card">
+                    <div class="post-image" style="background: linear-gradient(135deg, #E85D4C 0%, #C94A3A 100%);">
+                        <span class="post-category">Wellness</span>
+                        <span class="post-image-placeholder">🍷</span>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span>📅 Dec 20, 2025</span>
+                            <span>⏱️ 7 min read</span>
+                        </div>
+                        <h3><a href="naltrexone-alcohol-cravings.html">How Naltrexone Helps Reduce Alcohol Cravings</a></h3>
+                        <p class="post-excerpt">The science behind naltrexone, how it works in the brain, and what to expect when starting treatment.</p>
+                        <a href="naltrexone-alcohol-cravings.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Post 8 -->
+                <article class="post-card">
+                    <div class="post-image" style="background: linear-gradient(135deg, #9580C0 0%, #7A68A6 100%);">
+                        <span class="post-category">GLP-1</span>
+                        <span class="post-image-placeholder">📈</span>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span>📅 Dec 18, 2025</span>
+                            <span>⏱️ 5 min read</span>
+                        </div>
+                        <h3><a href="weight-loss-plateau-glp1.html">Hit a Weight Loss Plateau on GLP-1? Here's What to Do</a></h3>
+                        <p class="post-excerpt">Why plateaus happen and evidence-based strategies to break through and continue losing weight.</p>
+                        <a href="weight-loss-plateau-glp1.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Post 9 -->
+                <article class="post-card">
+                    <div class="post-image" style="background: linear-gradient(135deg, #7BBAC9 0%, #5A9AAA 100%);">
+                        <span class="post-category">Weight Loss</span>
+                        <span class="post-image-placeholder">🏃‍♀️</span>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span>📅 Dec 16, 2025</span>
+                            <span>⏱️ 6 min read</span>
+                        </div>
+                        <h3><a href="exercise-on-glp1.html">Best Exercises While Taking GLP-1 Medications</a></h3>
+                        <p class="post-excerpt">Protect muscle mass and accelerate results with the right workout routine during weight loss treatment.</p>
+                        <a href="exercise-on-glp1.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Post 10 -->
+                <article class="post-card">
+                    <div class="post-image" style="background: linear-gradient(135deg, #E8B4A0 0%, #D9A08A 100%);">
+                        <span class="post-category">Hormone Health</span>
+                        <span class="post-image-placeholder">😴</span>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span>📅 Dec 14, 2025</span>
+                            <span>⏱️ 7 min read</span>
+                        </div>
+                        <h3><a href="sleep-hormones-weight.html">The Connection Between Sleep, Hormones, and Weight</a></h3>
+                        <p class="post-excerpt">How poor sleep sabotages weight loss and hormone balance—plus practical tips to improve your rest.</p>
+                        <a href="sleep-hormones-weight.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-inner">
+                <h2>Get Health Tips in Your Inbox</h2>
+                <p>Join 25,000+ subscribers for weekly insights on weight loss, hormone health, and wellness.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">Amie</a>
+                    <p>Personalized weight loss and wellness treatments delivered to your door. Licensed doctors, certified pharmacies, real results.</p>
+                </div>
+
+                <div>
+                    <div class="footer-title">Treatments</div>
+                    <ul class="footer-links">
+                        <li><a href="../semaglutide.html">Semaglutide</a></li>
+                        <li><a href="../tirzepatide.html">Tirzepatide</a></li>
+                        <li><a href="../hrt.html">HRT</a></li>
+                        <li><a href="../naltrexone.html">Naltrexone</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="footer-title">Company</div>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="index.html">Blog</a></li>
+                        <li><a href="../contact-us.html">Contact</a></li>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Try Amie. All rights reserved. Compounded medications are not FDA-approved but are prepared by licensed pharmacies.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
