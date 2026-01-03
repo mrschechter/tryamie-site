@@ -416,237 +416,178 @@
             50% { box-shadow: 0 4px 25px rgba(196, 112, 122, 0.5); }
         }
 
-        /* Hero Product Section */
-        .product-hero {
+        /* Hero Section */
+        .hero {
             padding: 60px 0 80px;
             background: linear-gradient(180deg, var(--white) 0%, var(--cream) 100%);
-        }
-
-        .product-hero-inner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: start;
-        }
-
-        /* Product Gallery */
-        .product-gallery {
-            position: sticky;
-            top: 100px;
-        }
-
-        .product-main-image {
-            background: linear-gradient(145deg, var(--cream) 0%, var(--accent-light) 100%);
-            border-radius: var(--radius-xl);
-            aspect-ratio: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
             position: relative;
             overflow: hidden;
         }
 
-        .product-main-image::before {
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 560px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            border: 1px solid var(--primary-light);
+            padding: 10px 18px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .hero-badge svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 .highlight {
+            color: var(--primary);
+        }
+
+        .hero-subtitle {
+            font-size: 19px;
+            color: var(--text-medium);
+            margin-bottom: 28px;
+            line-height: 1.7;
+        }
+
+        .hero-symptoms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .hero-symptom {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            border: 1px solid var(--cream-dark);
+            padding: 10px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            color: var(--text-medium);
+        }
+
+        .hero-symptom svg {
+            width: 16px;
+            height: 16px;
+            color: var(--primary);
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .hero-trust {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .hero-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-trust-item svg {
+            width: 18px;
+            height: 18px;
+            color: var(--success);
+        }
+
+        .hero-visual {
+            position: relative;
+            min-width: 300px;
+        }
+
+        .hero-image {
+            background: linear-gradient(145deg, var(--cream) 0%, var(--accent-light) 100%);
+            border-radius: var(--radius-xl);
+            aspect-ratio: 1;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 40px;
+        }
+
+        .hero-image::before {
             content: '';
             position: absolute;
             top: 10%;
             left: 10%;
             width: 80%;
-            height: 60%;
-            background: radial-gradient(ellipse, rgba(255,255,255,0.6) 0%, transparent 70%);
+            height: 50%;
+            background: radial-gradient(ellipse, rgba(255,255,255,0.7) 0%, transparent 70%);
             filter: blur(30px);
         }
 
-        .product-visual {
-            position: relative;
-            z-index: 1;
-        }
-
-        .pill-bottle {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .bottle-cap {
-            width: 100px;
-            height: 30px;
-            background: linear-gradient(180deg, var(--primary-light) 0%, var(--primary) 100%);
-            border-radius: 8px 8px 0 0;
-        }
-
-        .bottle-body {
-            width: 120px;
-            height: 160px;
-            background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 100%);
-            border: 3px solid rgba(196, 112, 122, 0.2);
-            border-radius: 0 0 20px 20px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 40px rgba(196, 112, 122, 0.2);
-        }
-
-        .bottle-label {
-            text-align: center;
-        }
-
-        .bottle-label-title {
-            font-size: 10px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--primary);
-            margin-bottom: 4px;
-        }
-
-        .bottle-label-subtitle {
-            font-size: 8px;
-            color: var(--text-light);
-        }
-
-        .floating-pills {
+        .hero-floating-card {
             position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-
-        .floating-pill {
-            position: absolute;
-            width: 24px;
-            height: 40px;
-            background: linear-gradient(180deg, var(--primary-light) 0%, var(--primary) 100%);
-            border-radius: 12px;
-            animation: floatPill 4s ease-in-out infinite;
-        }
-
-        .floating-pill:nth-child(1) {
-            top: 15%;
-            left: 20%;
-            animation-delay: 0s;
-        }
-
-        .floating-pill:nth-child(2) {
-            top: 25%;
-            right: 15%;
-            animation-delay: 1s;
-            transform: rotate(30deg);
-        }
-
-        .floating-pill:nth-child(3) {
-            bottom: 20%;
-            left: 15%;
-            animation-delay: 2s;
-            transform: rotate(-20deg);
-        }
-
-        @keyframes floatPill {
-            0%, 100% { transform: translateY(0) rotate(var(--rotation, 0deg)); }
-            50% { transform: translateY(-15px) rotate(var(--rotation, 0deg)); }
-        }
-
-        .product-thumbnails {
-            display: flex;
-            gap: 12px;
-        }
-
-        .thumbnail {
-            flex: 1;
-            aspect-ratio: 1;
             background: var(--white);
             border-radius: var(--radius-md);
-            border: 2px solid var(--cream-dark);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.2s;
-            padding: 8px;
-            overflow: hidden;
+            padding: 16px 20px;
+            box-shadow: var(--shadow-md);
+            animation: float 3s ease-in-out infinite;
         }
 
-        .thumbnail:hover, .thumbnail.active {
-            border-color: var(--primary);
-            box-shadow: 0 4px 12px rgba(74, 144, 164, 0.2);
+        .hero-floating-card.card-1 {
+            top: 10%;
+            left: -30px;
         }
 
-        .thumbnail img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 6px;
+        .hero-floating-card.card-2 {
+            bottom: 15%;
+            right: -20px;
+            animation-delay: 1.5s;
         }
 
-        .thumbnail svg {
-            width: 32px;
-            height: 32px;
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .floating-stat {
+            font-size: 24px;
+            font-weight: 700;
             color: var(--primary);
-        }
-
-        /* Product Info */
-        .product-info {
-            padding-top: 20px;
-        }
-
-        .product-breadcrumb {
-            font-size: 13px;
-            color: var(--text-light);
-            margin-bottom: 16px;
-        }
-
-        .product-breadcrumb a {
-            color: var(--primary);
-        }
-
-        .product-badge-row {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 16px;
-        }
-
-        .product-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 12px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        .badge-bestseller {
-            background: var(--primary);
-            color: white;
-        }
-
-        .badge-doctor {
-            background: var(--accent-light);
-            color: var(--primary-dark);
-        }
-
-        .product-title {
-            font-size: 42px;
-            color: var(--text-dark);
-            margin-bottom: 8px;
-            letter-spacing: -0.5px;
-        }
-
-        .product-subtitle {
-            font-size: 20px;
-            color: var(--text-medium);
-            margin-bottom: 20px;
             font-family: 'Playfair Display', serif;
-            font-style: italic;
         }
 
-        .product-rating {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 24px;
+        .floating-label {
+            font-size: 12px;
+            color: var(--text-light);
         }
 
         .stars {
@@ -655,148 +596,49 @@
             letter-spacing: 2px;
         }
 
-        .rating-text {
-            font-size: 14px;
-            color: var(--text-medium);
-        }
-
-        .rating-text strong {
-            color: var(--text-dark);
-        }
-
-        .product-description {
-            font-size: 16px;
-            color: var(--text-medium);
-            line-height: 1.7;
-            margin-bottom: 28px;
-        }
-
-        /* Pricing Card */
-        .pricing-card {
+        /* As Seen In Section */
+        .as-seen-in {
+            padding: 40px 0;
             background: var(--white);
-            border-radius: var(--radius-lg);
-            padding: 28px;
-            border: 2px solid var(--cream-dark);
-            margin-bottom: 24px;
-        }
-
-        .pricing-header {
-            display: flex;
-            align-items: baseline;
-            gap: 12px;
-            margin-bottom: 8px;
-        }
-
-        .price-current {
-            font-size: 44px;
-            font-weight: 700;
-            color: var(--primary);
-            font-family: 'Playfair Display', serif;
-        }
-
-        .price-period {
-            font-size: 16px;
-            color: var(--text-light);
-        }
-
-        .price-original {
-            font-size: 20px;
-            color: var(--text-light);
-            text-decoration: line-through;
-        }
-
-        .pricing-savings {
-            display: inline-block;
-            background: var(--accent-light);
-            color: var(--primary-dark);
-            padding: 4px 12px;
-            border-radius: 50px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .pricing-includes {
-            list-style: none;
-            margin-bottom: 24px;
-        }
-
-        .pricing-includes li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 14px;
-            color: var(--text-medium);
-            padding: 10px 0;
             border-bottom: 1px solid var(--cream-dark);
         }
 
-        .pricing-includes li:last-child {
-            border-bottom: none;
-        }
-
-        .pricing-includes li svg {
-            width: 18px;
-            height: 18px;
-            color: var(--success);
-            flex-shrink: 0;
-        }
-
-        .pricing-cta {
-            width: 100%;
-            margin-bottom: 16px;
-        }
-
-        .pricing-guarantee {
+        .as-seen-in-inner {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .as-seen-in-label {
             font-size: 13px;
             color: var(--text-light);
-        }
-
-        .pricing-guarantee svg {
-            width: 16px;
-            height: 16px;
-            color: var(--trust-blue);
-        }
-
-        /* Trust Signals */
-        .trust-signals {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-        }
-
-        .trust-item {
-            text-align: center;
-            padding: 16px;
-            background: var(--white);
-            border-radius: var(--radius-md);
-            border: 1px solid var(--cream-dark);
-        }
-
-        .trust-item svg {
-            width: 28px;
-            height: 28px;
-            color: var(--primary);
-            margin-bottom: 8px;
-        }
-
-        .trust-item-title {
-            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 2px;
         }
 
-        .trust-item-desc {
-            font-size: 11px;
+        .as-seen-in-logos {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .as-seen-in-logo {
+            font-size: 18px;
+            font-weight: 700;
             color: var(--text-light);
+            opacity: 0.6;
+            transition: opacity 0.3s;
         }
 
-        /* Lifestyle Gallery Section */
+        .as-seen-in-logo:hover {
+            opacity: 1;
+        }
+
         /* Problem Agitation Section */
         .problem-agitation {
             padding: 80px 0;
@@ -1854,15 +1696,25 @@
         }
 
         /* Responsive */
-        @media (max-width: 1024px) {
-            .product-hero-inner {
+        @media (max-width: 900px) {
+            .hero-inner {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                text-align: center;
             }
 
-            .product-gallery {
-                position: relative;
-                top: 0;
+            .hero-symptoms {
+                justify-content: center;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .hero-trust {
+                justify-content: center;
+            }
+
+            .hero-visual {
                 max-width: 400px;
                 margin: 0 auto;
             }
@@ -2078,106 +1930,81 @@
         </div>
     </header>
 
-    <!-- Product Hero -->
-    <section class="product-hero">
-        <div class="container product-hero-inner">
-            <div class="product-gallery">
-                <div class="product-main-image" id="main-product-image">
-                    <img src="images/little-pink-pill.png" alt="Amie Little Pink Pill" style="max-width: 100%; height: auto; max-height: 400px; object-fit: contain;">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    FDA-Approved for Low Libido
                 </div>
-                <div class="product-thumbnails">
-                    <div class="thumbnail active" onclick="changeImage('images/little-pink-pill.png', this)">
-                        <img src="images/little-pink-pill.png" alt="Product" style="width: 100%; height: 100%; object-fit: contain;">
+
+                <h1>Rediscover the <span class="highlight">Desire</span> You've Been Missing</h1>
+
+                <p class="hero-subtitle">A clinically-proven treatment for women experiencing low sexual desire. The Little Pink Pill works by balancing neurotransmitters in the brain, helping you feel like yourself again.</p>
+
+                <div class="hero-symptoms">
+                    <div class="hero-symptom">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        Low desire
                     </div>
-                    <div class="thumbnail" onclick="changeImage('images/lifestyle/lpp-confidence-final.png', this)">
-                        <img src="images/lifestyle/lpp-confidence-final.png" alt="Woman with product" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;">
+                    <div class="hero-symptom">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        Relationship strain
                     </div>
-                    <div class="thumbnail" onclick="changeImage('images/lifestyle/lpp-vanity-ritual.png', this)">
-                        <img src="images/lifestyle/lpp-vanity-ritual.png" alt="Evening ritual" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;">
+                    <div class="hero-symptom">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        Lost spark
                     </div>
-                    <div class="thumbnail" onclick="changeImage('images/lifestyle/lpp-couple-connection.png', this)">
-                        <img src="images/lifestyle/lpp-couple-connection.png" alt="Couple connection" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;">
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#pricing" class="btn btn-primary btn-lg">Take the 2-Minute Assessment →</a>
+                </div>
+
+                <div class="hero-trust">
+                    <div class="hero-trust-item">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        HSA/FSA Eligible
+                    </div>
+                    <div class="hero-trust-item">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        Cancel Anytime
+                    </div>
+                    <div class="hero-trust-item">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        Discreet Shipping
                     </div>
                 </div>
             </div>
-            
-            <div class="product-info">
-                <div class="product-breadcrumb">
-                    <a href="index.html">Home</a> / <a href="/wellness">Health & Wellness</a> / Little Pink Pill
+
+            <div class="hero-visual">
+                <div class="hero-image">
+                    <img src="images/little-pink-pill.png" alt="Amie Little Pink Pill" style="max-width: 100%; height: auto; max-height: 350px; object-fit: contain;">
                 </div>
-                
-                <div class="product-badge-row">
-                    <span class="product-badge badge-bestseller">★ Bestseller</span>
-                    <span class="product-badge badge-doctor">Doctor Prescribed</span>
+                <div class="hero-floating-card card-1">
+                    <div class="floating-stat">FDA</div>
+                    <div class="floating-label">Approved 2019</div>
                 </div>
-                
-                <h1 class="product-title">Little Pink Pill</h1>
-                <p class="product-subtitle">Rediscover desire. Reconnect with your partner.</p>
-                
-                <div class="product-rating">
-                    <span class="stars">★★★★★</span>
-                    <span class="rating-text"><strong>4.8</strong> from 1,247 reviews</span>
+                <div class="hero-floating-card card-2">
+                    <div class="floating-stat">25%</div>
+                    <div class="floating-label">More desire</div>
                 </div>
-                
-                <p class="product-description">
-                    A clinically-proven treatment for women experiencing low sexual desire. The Little Pink Pill works by balancing neurotransmitters in the brain that affect sexual desire, helping you feel like yourself again.
-                </p>
-                
-                <div class="pricing-card" id="pricing">
-                    <div class="pricing-header">
-                        <span class="price-current">$89</span>
-                        <span class="price-period">/month</span>
-                        <span class="price-original">$149</span>
-                    </div>
-                    <span class="pricing-savings">Save $60 — Limited Time</span>
-                    
-                    <ul class="pricing-includes">
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                            30-day supply of medication
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                            Online doctor consultation included
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                            Free & discreet shipping
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                            Ongoing care & support
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                            Cancel anytime — no commitments
-                        </li>
-                    </ul>
-                    
-                    <button class="btn btn-primary btn-lg pricing-cta">Start My Consultation →</button>
-                    
-                    <div class="pricing-guarantee">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
-                        Full refund if not approved by our doctors
-                    </div>
-                </div>
-                
-                <div class="trust-signals">
-                    <div class="trust-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
-                        <div class="trust-item-title">Discreet</div>
-                        <div class="trust-item-desc">Unmarked packaging</div>
-                    </div>
-                    <div class="trust-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
-                        <div class="trust-item-title">Safe</div>
-                        <div class="trust-item-desc">FDA-approved</div>
-                    </div>
-                    <div class="trust-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                        <div class="trust-item-title">HSA/FSA</div>
-                        <div class="trust-item-desc">Eligible expense</div>
-                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- As Seen In Section -->
+    <section class="as-seen-in">
+        <div class="container">
+            <div class="as-seen-in-inner">
+                <span class="as-seen-in-label">As Seen In</span>
+                <div class="as-seen-in-logos">
+                    <span class="as-seen-in-logo">Forbes</span>
+                    <span class="as-seen-in-logo">Healthline</span>
+                    <span class="as-seen-in-logo">Women's Health</span>
+                    <span class="as-seen-in-logo">Shape</span>
+                    <span class="as-seen-in-logo">Prevention</span>
                 </div>
             </div>
         </div>

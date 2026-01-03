@@ -708,6 +708,49 @@
             color: var(--text-light);
         }
 
+        /* As Seen In Section */
+        .as-seen-in {
+            padding: 40px 0;
+            background: var(--white);
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .as-seen-in-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .as-seen-in-label {
+            font-size: 13px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .as-seen-in-logos {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .as-seen-in-logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-light);
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+
+        .as-seen-in-logo:hover {
+            opacity: 1;
+        }
+
         /* Problem Agitation Section */
         .problem-agitation {
             padding: 80px 0;
@@ -2458,6 +2501,22 @@
                 <div class="hero-floating-card card-2">
                     <div class="floating-stat">2-4 wks</div>
                     <div class="floating-label">To feel better</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- As Seen In Section -->
+    <section class="as-seen-in">
+        <div class="container">
+            <div class="as-seen-in-inner">
+                <span class="as-seen-in-label">As Seen In</span>
+                <div class="as-seen-in-logos">
+                    <span class="as-seen-in-logo">Forbes</span>
+                    <span class="as-seen-in-logo">Healthline</span>
+                    <span class="as-seen-in-logo">Women's Health</span>
+                    <span class="as-seen-in-logo">Shape</span>
+                    <span class="as-seen-in-logo">Prevention</span>
                 </div>
             </div>
         </div>

@@ -833,6 +833,172 @@
             line-height: 1.6;
         }
 
+        /* Results Timeline Infographic */
+        .results-timeline {
+            padding: 80px 0;
+            background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--primary-light) 0%, var(--primary) 100%);
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 48px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+            padding-right: calc(50% + 40px);
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+            padding-left: calc(50% + 40px);
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .timeline-week {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            box-shadow: var(--shadow-md);
+        }
+
+        .timeline-content {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--cream-dark);
+            position: relative;
+            flex: 1;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 40px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 40px;
+        }
+
+        .timeline-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .timeline-icon svg {
+            width: 24px;
+            height: 24px;
+            color: white;
+        }
+
+        .timeline-content h4 {
+            font-size: 20px;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .timeline-content p {
+            font-size: 14px;
+            color: var(--text-medium);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .timeline-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cream);
+            padding: 8px 16px;
+            border-radius: 50px;
+        }
+
+        .timeline-stat .stat-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .timeline-stat .stat-label {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .timeline-disclaimer {
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        .timeline-disclaimer p {
+            font-size: 13px;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: 20px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                flex-direction: column;
+                padding-left: 60px;
+                padding-right: 0;
+            }
+
+            .timeline-marker {
+                left: 20px;
+                top: 0;
+            }
+
+            .timeline-content,
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin: 16px 0 0 0;
+            }
+        }
+
         /* Pricing Section */
         .pricing {
             padding: 80px 0;
@@ -2600,6 +2766,92 @@
                     <h3>Slows Digestion</h3>
                     <p>Delays stomach emptying so you feel fuller longer after meals. No more constant snacking or late-night cravings.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Timeline Infographic -->
+    <section class="results-timeline">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Weight Loss Journey</h2>
+                <p>What to expect with oral semaglutide — no injections, same powerful results.</p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-week">Week 1-2</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <h4>Easy Daily Habit</h4>
+                        <p>Take one pill daily on an empty stomach. Most patients notice reduced hunger and fewer cravings within the first two weeks.</p>
+                        <div class="timeline-stat">
+                            <span class="stat-value">80%</span>
+                            <span class="stat-label">report less hunger</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-week">Week 4-8</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg>
+                        </div>
+                        <h4>Visible Progress</h4>
+                        <p>Clothes start fitting differently. You'll likely see 3-5% body weight loss by month two as your body adjusts to the medication.</p>
+                        <div class="timeline-stat">
+                            <span class="stat-value">5%</span>
+                            <span class="stat-label">avg. weight loss</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-week">Month 3-6</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        </div>
+                        <h4>Maximum Effect</h4>
+                        <p>Reaching therapeutic dose with daily convenience. Many patients see 10-15% total body weight loss. New habits become second nature.</p>
+                        <div class="timeline-stat">
+                            <span class="stat-value">12%</span>
+                            <span class="stat-label">avg. weight loss</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-week">Month 12+</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                        </div>
+                        <h4>Long-Term Success</h4>
+                        <p>Clinical trials show sustained weight loss of 15%+ with continued use. All the benefits of semaglutide without needles.</p>
+                        <div class="timeline-stat">
+                            <span class="stat-value">15%</span>
+                            <span class="stat-label">sustained loss</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-disclaimer">
+                <p>*Individual results may vary. Based on clinical trial data for oral semaglutide (Rybelsus).</p>
             </div>
         </div>
     </section>
