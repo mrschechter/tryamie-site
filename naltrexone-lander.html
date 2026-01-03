@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Pill That's Helping 49% of Americans Finally Drink Less in 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-navy: #1a365d;
+            --primary-teal: #2c7a7b;
+            --accent-amber: #d69e2e;
+            --accent-coral: #e07b67;
+            --text-dark: #1a202c;
+            --text-medium: #4a5568;
+            --text-light: #718096;
+            --bg-cream: #fffaf5;
+            --bg-white: #ffffff;
+            --bg-light-teal: #e6fffa;
+            --bg-light-blue: #ebf8ff;
+            --border-light: #e2e8f0;
+            --cta-teal: #319795;
+            --cta-teal-hover: #2c7a7b;
+            --warning-amber: #b7791f;
+            --success-green: #38a169;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        /* Sticky Header */
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--primary-navy);
+            color: white;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(26, 54, 93, 0.2);
+        }
+
+        .sticky-header span {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .sticky-header .highlight-price {
+            color: var(--accent-amber);
+            font-weight: 700;
+        }
+
+        .sticky-header .shop-btn {
+            background: var(--cta-teal);
+            color: white;
+            padding: 10px 24px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .sticky-header .shop-btn:hover {
+            background: var(--cta-teal-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Main Content Container */
+        .main-container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 80px 20px 60px;
+        }
+
+        /* Badge */
+        .research-badge {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .research-badge span {
+            background: var(--bg-light-teal);
+            color: var(--primary-teal);
+            padding: 10px 20px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            border-radius: 25px;
+            display: inline-block;
+        }
+
+        /* Headline */
+        h1 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(26px, 5vw, 40px);
+            line-height: 1.2;
+            text-align: center;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .subheadline {
+            text-align: center;
+            color: var(--text-medium);
+            font-size: 19px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        /* Author Info */
+        .author-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-teal), var(--primary-navy));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .author-text {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .read-time {
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 40px;
+        }
+
+        .read-time strong {
+            color: var(--text-dark);
+        }
+
+        /* Hero Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 40px 0;
+            background: var(--bg-white);
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .stat-number {
+            font-family: 'Fraunces', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-teal);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 50px;
+        }
+
+        .story-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-medium);
+            margin-bottom: 25px;
+        }
+
+        .story-text.highlight {
+            font-size: 20px;
+            font-style: italic;
+            color: var(--text-dark);
+            border-left: 4px solid var(--primary-teal);
+            padding-left: 20px;
+            margin: 35px 0;
+            background: var(--bg-light-teal);
+            padding: 25px;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .story-text strong {
+            color: var(--text-dark);
+        }
+
+        /* Section Headers */
+        h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(24px, 4vw, 32px);
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+
+        /* Problem List */
+        .problem-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .problem-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 18px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .problem-list li:last-child {
+            border-bottom: none;
+        }
+
+        .problem-icon {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            background: #fef3c7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--warning-amber);
+            font-size: 18px;
+        }
+
+        .problem-text {
+            font-size: 17px;
+            color: var(--text-medium);
+            line-height: 1.5;
+        }
+
+        /* Why It Fails List */
+        .fails-list {
+            list-style: none;
+            margin: 30px 0;
+            background: #fff5f5;
+            padding: 25px 30px;
+            border-radius: 12px;
+            border-left: 4px solid #e53e3e;
+        }
+
+        .fails-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 12px 0;
+        }
+
+        .fails-icon {
+            width: 28px;
+            height: 28px;
+            min-width: 28px;
+            background: #fed7d7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c53030;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .fails-list strong {
+            color: #c53030;
+        }
+
+        /* Science Box */
+        .science-box {
+            background: linear-gradient(135deg, var(--bg-light-blue), #f0fff4);
+            border: 2px solid var(--border-light);
+            padding: 35px;
+            border-radius: 16px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .science-box h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 20px;
+            color: var(--primary-navy);
+            margin-bottom: 15px;
+        }
+
+        .science-stat {
+            font-size: 52px;
+            font-weight: 700;
+            color: var(--primary-teal);
+            margin: 15px 0;
+            font-family: 'Fraunces', serif;
+        }
+
+        .science-source {
+            font-size: 13px;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            background: var(--bg-white);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 25px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .step-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            background: linear-gradient(135deg, var(--primary-teal), var(--primary-navy));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 20px;
+            font-family: 'Fraunces', serif;
+        }
+
+        .step-content h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 20px;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .step-content p {
+            color: var(--text-medium);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Benefits List */
+        .benefits-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .benefits-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 14px 0;
+        }
+
+        .benefit-check {
+            width: 28px;
+            height: 28px;
+            min-width: 28px;
+            background: var(--success-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* CTA Button */
+        .cta-section {
+            text-align: center;
+            padding: 45px 35px;
+            background: linear-gradient(135deg, var(--bg-light-teal), var(--bg-light-blue));
+            border-radius: 24px;
+            margin: 50px 0;
+        }
+
+        .cta-price {
+            font-family: 'Fraunces', serif;
+            font-size: 28px;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .cta-price .original {
+            text-decoration: line-through;
+            color: var(--text-light);
+            font-size: 22px;
+            margin-right: 10px;
+        }
+
+        .cta-price .current {
+            color: var(--primary-teal);
+            font-weight: 700;
+        }
+
+        .cta-savings {
+            background: var(--accent-amber);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--cta-teal);
+            color: white;
+            padding: 20px 50px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 25px rgba(49, 151, 149, 0.35);
+        }
+
+        .cta-button:hover {
+            background: var(--cta-teal-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 35px rgba(49, 151, 149, 0.45);
+        }
+
+        .cta-subtext {
+            margin-top: 18px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .cta-trust {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-medium);
+        }
+
+        .trust-item span {
+            color: var(--success-green);
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            margin: 60px 0;
+        }
+
+        .testimonial-card {
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 25px;
+            font-size: 60px;
+            color: var(--bg-light-teal);
+            font-family: 'Fraunces', serif;
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            color: var(--accent-amber);
+            font-size: 18px;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-medium);
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-teal), var(--primary-navy));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .testimonial-info {
+            flex: 1;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 15px;
+        }
+
+        .testimonial-badge {
+            color: var(--primary-teal);
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .testimonial-result {
+            background: var(--bg-light-teal);
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            color: var(--primary-teal);
+            font-weight: 600;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            background: var(--bg-white);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            padding-bottom: 30px;
+            border-left: 3px solid var(--bg-light-teal);
+        }
+
+        .timeline-item:last-child {
+            border-left-color: var(--success-green);
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 13px;
+            height: 13px;
+            background: var(--primary-teal);
+            border-radius: 50%;
+            border: 3px solid var(--bg-white);
+        }
+
+        .timeline-item:last-child::before {
+            background: var(--success-green);
+        }
+
+        .timeline-period {
+            font-family: 'Fraunces', serif;
+            font-size: 18px;
+            color: var(--primary-teal);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .timeline-text {
+            color: var(--text-medium);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Guarantee Box */
+        .guarantee-box {
+            background: var(--bg-white);
+            border: 3px solid var(--success-green);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .guarantee-icon {
+            font-size: 56px;
+            margin-bottom: 15px;
+        }
+
+        .guarantee-title {
+            font-family: 'Fraunces', serif;
+            font-size: 26px;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .guarantee-highlight {
+            background: #f0fff4;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .guarantee-highlight strong {
+            color: var(--success-green);
+            font-size: 20px;
+        }
+
+        /* Comparison Section */
+        .comparison-section {
+            margin: 50px 0;
+        }
+
+        .comparison-table {
+            background: var(--bg-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.06);
+        }
+
+        .comparison-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            background: var(--primary-navy);
+            color: white;
+            padding: 18px 25px;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            padding: 18px 25px;
+            border-bottom: 1px solid var(--border-light);
+            align-items: center;
+        }
+
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-row .feature {
+            color: var(--text-medium);
+            font-size: 15px;
+        }
+
+        .comparison-row .check {
+            color: var(--success-green);
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .comparison-row .x {
+            color: #e53e3e;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .comparison-row.highlight {
+            background: var(--bg-light-teal);
+        }
+
+        /* PS Section */
+        .ps-section {
+            background: #fffbeb;
+            padding: 30px;
+            border-radius: 16px;
+            margin: 40px 0;
+            border: 2px dashed var(--accent-amber);
+        }
+
+        .ps-section p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-medium);
+        }
+
+        .ps-section strong {
+            color: var(--text-dark);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin: 50px 0;
+        }
+
+        .faq-item {
+            background: var(--bg-white);
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+        }
+
+        .faq-question {
+            font-family: 'Fraunces', serif;
+            font-size: 18px;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            color: var(--text-medium);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        .page-footer {
+            text-align: center;
+            padding: 50px 20px;
+            background: var(--primary-navy);
+            color: white;
+            margin-top: 60px;
+        }
+
+        .footer-brand {
+            font-family: 'Fraunces', serif;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .footer-disclaimer {
+            font-size: 12px;
+            color: rgba(255,255,255,0.6);
+            max-width: 600px;
+            margin: 0 auto 20px;
+            line-height: 1.7;
+        }
+
+        .footer-copyright {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .main-container {
+                padding: 70px 15px 40px;
+            }
+
+            .sticky-header {
+                padding: 10px 15px;
+                gap: 10px;
+            }
+
+            .sticky-header span {
+                font-size: 12px;
+            }
+
+            .sticky-header .shop-btn {
+                padding: 8px 16px;
+                font-size: 11px;
+            }
+
+            .stats-bar {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .stat-item {
+                border-bottom: 1px solid var(--border-light);
+                padding-bottom: 15px;
+            }
+
+            .stat-item:last-child {
+                border-bottom: none;
+                padding-bottom: 10px;
+            }
+
+            .how-it-works {
+                padding: 25px 20px;
+            }
+
+            .testimonial-card {
+                padding: 25px 20px;
+            }
+
+            .cta-button {
+                padding: 18px 35px;
+                font-size: 14px;
+            }
+
+            .comparison-header,
+            .comparison-row {
+                grid-template-columns: 1.5fr 1fr 1fr;
+                padding: 15px;
+                font-size: 13px;
+            }
+
+            .guarantee-box {
+                padding: 30px 20px;
+            }
+
+            .timeline-section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <span>First Month <span class="highlight-price">$99</span> (then $119/mo)</span>
+        <a href="https://tryamie.com/naltrexone" class="shop-btn">Get Started Now</a>
+    </header>
+
+    <main class="main-container">
+        <!-- Badge -->
+        <div class="research-badge">
+            <span>FDA-Approved Since 1994</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1>The Daily Pill That's Helping 49% of Americans Finally Drink Less in 2025</h1>
+        <p class="subheadline">Why naltrexone is being called "the Ozempic of alcohol" – and how you can try it risk-free with our 30-day money-back guarantee</p>
+
+        <!-- Author Info -->
+        <div class="author-info">
+            <div class="author-avatar">🩺</div>
+            <span class="author-text">Medical Review by Try Amie Clinical Team | December 2025</span>
+        </div>
+        <p class="read-time">Estimated <strong>5-7 Minute Read</strong></p>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-number">49%</span>
+                <span class="stat-label">Of Americans Drinking Less in 2025</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">73%</span>
+                <span class="stat-label">See Results in 2 Weeks</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">50mg</span>
+                <span class="stat-label">One Pill, Once Daily</span>
+            </div>
+        </div>
+
+        <!-- Opening Story -->
+        <section class="content-section">
+            <p class="story-text">Mike stared at the empty wine glass, his third of the evening. Again.</p>
+            
+            <p class="story-text">At 42, this successful architect from Denver had promised himself – and his wife – that he'd cut back. Monday through Thursday, no drinks. Just weekends.</p>
+            
+            <p class="story-text">That lasted exactly one week.</p>
+
+            <p class="story-text">It wasn't that he couldn't stop. He could. For a day or two. But then a stressful client call, a bad commute, or just... Tuesday. And suddenly he was reaching for that familiar bottle again.</p>
+
+            <p class="story-text highlight"><strong>"I wasn't an alcoholic,"</strong> Mike explains. <strong>"I didn't need a drink to get through the day. But I couldn't seem to NOT want one either. That craving was always there, just waiting."</strong></p>
+
+            <p class="story-text">He'd tried willpower. He'd tried apps. He'd tried switching to "healthier" drinks like hard seltzer. Nothing worked for more than a few days.</p>
+            
+            <p class="story-text">Sound familiar?</p>
+            
+            <p class="story-text"><strong>You're not alone. And more importantly – it's not a character flaw.</strong></p>
+            
+            <p class="story-text">Because what Mike didn't know – what most people don't know – is that alcohol cravings are neurological, not psychological.</p>
+            
+            <p class="story-text">And there's a simple, FDA-approved pill that can turn them off.</p>
+        </section>
+
+        <!-- The Problem Section -->
+        <section class="content-section">
+            <h2>Why willpower alone almost never works</h2>
+            
+            <p class="story-text">Sound like you?</p>
+
+            <ul class="problem-list">
+                <li>
+                    <div class="problem-icon">🍷</div>
+                    <span class="problem-text">You say "just one drink" but somehow end up with three or four</span>
+                </li>
+                <li>
+                    <div class="problem-icon">🔄</div>
+                    <span class="problem-text">You've tried Dry January (or similar) and made it... a week</span>
+                </li>
+                <li>
+                    <div class="problem-icon">😴</div>
+                    <span class="problem-text">Your sleep quality has tanked, but a nightcap feels like the only thing that helps</span>
+                </li>
+                <li>
+                    <div class="problem-icon">⚖️</div>
+                    <span class="problem-text">You've gained weight and know alcohol is partly to blame</span>
+                </li>
+                <li>
+                    <div class="problem-icon">🧠</div>
+                    <span class="problem-text">You feel foggy, anxious, or just "not yourself" more often than you'd like</span>
+                </li>
+                <li>
+                    <div class="problem-icon">💭</div>
+                    <span class="problem-text">You think about drinking more than you want to admit</span>
+                </li>
+            </ul>
+
+            <p class="story-text">Here's the thing: <strong>these aren't character flaws. They're brain chemistry.</strong></p>
+
+            <p class="story-text">When you drink, your brain releases endorphins that bind to opioid receptors. That's the "buzz." That's the reward signal that makes your brain say "do that again."</p>
+
+            <p class="story-text">Over time, your brain literally rewires itself to expect that reward. The craving isn't weakness – it's neuroscience.</p>
+
+            <div class="science-box">
+                <h3>The Science of Cravings</h3>
+                <p class="science-stat">60%</p>
+                <p>of heavy drinking behavior is driven by neurological reward pathways, not conscious choice</p>
+                <p class="science-source">— American Journal of Psychiatry, 2023</p>
+            </div>
+
+            <p class="story-text">That's why willpower, apps, and "moderation strategies" fail so often. They're trying to override hardware with software.</p>
+
+            <p class="story-text"><strong>What if you could change the hardware instead?</strong></p>
+        </section>
+
+        <!-- Why Other Methods Fail -->
+        <section class="content-section">
+            <h2>What you've probably already tried (and why it didn't stick)</h2>
+
+            <ul class="fails-list">
+                <li>
+                    <div class="fails-icon">✕</div>
+                    <span><strong>Willpower & "rules"</strong> – Works for a few days until stress hits. Then you're right back where you started, plus guilt.</span>
+                </li>
+                <li>
+                    <div class="fails-icon">✕</div>
+                    <span><strong>Drink-tracking apps</strong> – Great for awareness, terrible for actually reducing cravings. You still WANT the drink.</span>
+                </li>
+                <li>
+                    <div class="fails-icon">✕</div>
+                    <span><strong>Switching to "healthier" options</strong> – Hard seltzer still has alcohol. Your brain still gets the reward signal.</span>
+                </li>
+                <li>
+                    <div class="fails-icon">✕</div>
+                    <span><strong>AA or abstinence programs</strong> – Effective for some, but overkill if you just want to drink LESS, not quit entirely.</span>
+                </li>
+                <li>
+                    <div class="fails-icon">✕</div>
+                    <span><strong>Sheer avoidance</strong> – You can't avoid every social event, every stressful day, every grocery store with a wine aisle.</span>
+                </li>
+            </ul>
+
+            <p class="story-text">None of these address the fundamental problem: <strong>your brain's reward system is working against you.</strong></p>
+
+            <p class="story-text">That's not a personal failure. That's biology.</p>
+
+            <p class="story-text">And biology responds to biology. Which brings us to naltrexone.</p>
+        </section>
+
+        <!-- The Solution Section -->
+        <section class="content-section">
+            <h2>The FDA-approved pill that turns off cravings at the source</h2>
+
+            <p class="story-text">Naltrexone has been FDA-approved for alcohol use disorder since 1994. It's been prescribed millions of times. It's on the World Health Organization's List of Essential Medicines.</p>
+
+            <p class="story-text">And yet, until recently, almost nobody outside of addiction medicine knew it existed.</p>
+
+            <p class="story-text highlight"><strong>"Naltrexone blocks the euphoric effects of alcohol... allowing patients to reduce alcohol use by removing the perceived 'reward' of consumption."</strong><br><br>— American Medical Association</p>
+
+            <p class="story-text">Here's how it works:</p>
+
+            <div class="how-it-works">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>You Take One Pill Daily</h3>
+                        <p>50mg naltrexone, once per day. Takes about 30 seconds. No injections, no complicated schedules, no counting drinks.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>It Blocks Your Opioid Receptors</h3>
+                        <p>Naltrexone sits on the receptors in your brain that normally receive the "reward" signal from alcohol. The signal can't get through.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Drinking Becomes... Boring</h3>
+                        <p>Without the buzz, without the reward, alcohol stops feeling special. You can still drink if you want – but you won't want to as much.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Your Brain Rewires Over Time</h3>
+                        <p>As you drink less, your brain's reward pathways start to normalize. Many people find their cravings fade naturally over 3-6 months.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="story-text">You don't have to quit cold turkey. You don't have to attend meetings. You don't have to tell anyone.</p>
+
+            <p class="story-text"><strong>You just take one pill a day and watch your relationship with alcohol transform.</strong></p>
+
+            <!-- CTA -->
+            <div class="cta-section">
+                <div class="cta-savings">FIRST MONTH JUST $99 (SAVE $20)</div>
+                <a href="https://tryamie.com/naltrexone" class="cta-button">Start Your Free Consultation</a>
+                <p class="cta-subtext">Licensed physicians • Discreet shipping • Cancel anytime</p>
+                <div class="cta-trust">
+                    <span class="trust-item"><span>✓</span> 30-Day Money-Back Guarantee</span>
+                    <span class="trust-item"><span>✓</span> FDA-Approved Medication</span>
+                    <span class="trust-item"><span>✓</span> US-Licensed Physicians</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <h2>Real people, real results</h2>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"I went from 3-4 glasses of wine every night to maybe 1-2 on weekends. The crazy part? I don't miss it. I just... stopped wanting it as much. My wife noticed before I did."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">MK</div>
+                    <div class="testimonial-info">
+                        <span class="testimonial-name">Michael K., 47</span>
+                        <span class="testimonial-badge">✓ Verified Customer</span>
+                    </div>
+                    <span class="testimonial-result">↓ 75% less drinking</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"I was skeptical – like, how can a pill change how much I want to drink? But by week 2, I noticed I was leaving drinks half-finished. That NEVER happened before. I've lost 12 pounds too."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">SR</div>
+                    <div class="testimonial-info">
+                        <span class="testimonial-name">Sarah R., 38</span>
+                        <span class="testimonial-badge">✓ Verified Customer</span>
+                    </div>
+                    <span class="testimonial-result">↓ 12 lbs in 8 weeks</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"The thing that surprised me most was how easy it was. No weird side effects, no constant tracking. I just take my pill in the morning and go about my day. Drinking just isn't on my mind like it used to be."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">JD</div>
+                    <div class="testimonial-info">
+                        <span class="testimonial-name">James D., 52</span>
+                        <span class="testimonial-badge">✓ Verified Customer</span>
+                    </div>
+                    <span class="testimonial-result">3 months alcohol-free</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"I tried everything – apps, mocktails, telling myself 'just one.' Nothing worked until naltrexone. Now I can go to happy hour and genuinely stop at one beer. My friends are shocked."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">AL</div>
+                    <div class="testimonial-info">
+                        <span class="testimonial-name">Amanda L., 34</span>
+                        <span class="testimonial-badge">✓ Verified Customer</span>
+                    </div>
+                    <span class="testimonial-result">Social drinking → controlled</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"My sleep is better. My anxiety is down. I'm more present with my kids. I didn't realize how much alcohol was affecting EVERYTHING until I cut way back. This pill gave me my life back."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">DP</div>
+                    <div class="testimonial-info">
+                        <span class="testimonial-name">David P., 44</span>
+                        <span class="testimonial-badge">✓ Verified Customer</span>
+                    </div>
+                    <span class="testimonial-result">Better sleep, less anxiety</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- What To Expect Timeline -->
+        <section class="content-section">
+            <h2>What to expect when you start</h2>
+
+            <div class="timeline-section">
+                <div class="timeline-item">
+                    <div class="timeline-period">Days 1-3: The Adjustment</div>
+                    <div class="timeline-text">Some people experience mild nausea or headache as their body adjusts. This typically fades quickly. Many feel nothing at all – just take your pill and go about your day.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-period">Week 1-2: The Shift</div>
+                    <div class="timeline-text">You might notice that your usual drink doesn't hit the same way. The buzz is muted. Some people describe it as "drinking decaf coffee" – you're going through the motions, but the payoff isn't there.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-period">Week 3-4: The Realization</div>
+                    <div class="timeline-text">This is when most people have their "aha" moment. You'll catch yourself leaving drinks unfinished, declining refills, or just... forgetting to drink. The craving voice gets quieter.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-period">Month 2-3: The New Normal</div>
+                    <div class="timeline-text">Your relationship with alcohol has fundamentally changed. Drinking becomes a conscious choice, not an automatic habit. Many people find they're naturally drinking 50-80% less.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-period">Month 6+: The Freedom</div>
+                    <div class="timeline-text">Some people continue taking naltrexone long-term. Others taper off as their brain rewires. Either way, you're in control now – not your cravings.</div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <a href="https://tryamie.com/naltrexone" class="cta-button">Start Your Transformation Today</a>
+                <p class="cta-subtext">30-Day Money-Back Guarantee • Cancel Anytime</p>
+            </div>
+        </section>
+
+        <!-- Why Try Amie Section -->
+        <section class="content-section">
+            <h2>Why thousands are choosing Try Amie</h2>
+
+            <p class="story-text">There are other places to get naltrexone online. So why are smart, research-driven people choosing us?</p>
+
+            <div class="comparison-section">
+                <div class="comparison-table">
+                    <div class="comparison-header">
+                        <span>Feature</span>
+                        <span style="text-align:center">Try Amie</span>
+                        <span style="text-align:center">Others</span>
+                    </div>
+                    <div class="comparison-row highlight">
+                        <span class="feature">30-Day Money-Back Guarantee</span>
+                        <span class="check">✓</span>
+                        <span class="x">✕</span>
+                    </div>
+                    <div class="comparison-row">
+                        <span class="feature">$99 First Month ($119/mo after)</span>
+                        <span class="check">✓</span>
+                        <span class="x">✕</span>
+                    </div>
+                    <div class="comparison-row">
+                        <span class="feature">No Commitment – Cancel Anytime</span>
+                        <span class="check">✓</span>
+                        <span class="check">✓</span>
+                    </div>
+                    <div class="comparison-row">
+                        <span class="feature">US-Licensed Physicians</span>
+                        <span class="check">✓</span>
+                        <span class="check">✓</span>
+                    </div>
+                    <div class="comparison-row">
+                        <span class="feature">Discreet Shipping</span>
+                        <span class="check">✓</span>
+                        <span class="check">✓</span>
+                    </div>
+                    <div class="comparison-row highlight">
+                        <span class="feature">Risk-Free Trial</span>
+                        <span class="check">✓</span>
+                        <span class="x">✕</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="story-text">Most telehealth companies charge you upfront with no guarantee. If it doesn't work for you? Too bad.</p>
+
+            <p class="story-text"><strong>We do things differently.</strong></p>
+
+            <p class="story-text">Because we believe so strongly in naltrexone – and because we've seen it change so many lives – we're willing to put our money where our mouth is.</p>
+
+            <p class="story-text">Try it for 30 days. If you don't see a real difference in your drinking habits, your cravings, or your relationship with alcohol – we'll refund every penny. No questions asked.</p>
+
+            <p class="story-text"><strong>You literally have nothing to lose except the cravings.</strong></p>
+        </section>
+
+        <!-- Guarantee Section -->
+        <section class="content-section">
+            <div class="guarantee-box">
+                <div class="guarantee-icon">🛡️</div>
+                <h3 class="guarantee-title">Our 30-Day "Drink Less or It's Free" Guarantee</h3>
+                <p class="story-text" style="text-align: left;">We're so confident naltrexone will help you drink less that we're offering a full 30-day money-back guarantee.</p>
+                <div class="guarantee-highlight">
+                    <strong>If you don't notice a real difference in your cravings or drinking habits within 30 days – we'll refund 100% of your purchase. No questions asked.</strong>
+                </div>
+                <p class="story-text" style="text-align: left;">This isn't a "store credit" guarantee. This isn't a "minus shipping" guarantee. This is a full, complete refund if you're not satisfied.</p>
+                <p class="story-text" style="text-align: left;"><strong>You either drink less, or you don't pay. Period.</strong></p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>Common questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Is naltrexone safe?</div>
+                <div class="faq-answer">Naltrexone has been FDA-approved since 1994 and has an excellent safety profile. It's on the World Health Organization's List of Essential Medicines. Common side effects are mild and typically resolve within the first week – most commonly slight nausea or headache. It's non-addictive and has no abuse potential.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I still drink while taking naltrexone?</div>
+                <div class="faq-answer">Yes – that's actually how it works. You continue drinking (if you choose to), but the "reward" signal is blocked. Over time, this weakens the craving-reward loop in your brain. Many people find they naturally drink less without consciously trying to.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How is this different from Antabuse?</div>
+                <div class="faq-answer">Antabuse (disulfiram) makes you violently ill if you drink ANY alcohol. It's a punishment approach. Naltrexone is different – it doesn't make you sick. It simply removes the "high" from drinking, allowing your brain to naturally lose interest over time. Much gentler, much more sustainable.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do I need to tell my doctor?</div>
+                <div class="faq-answer">Our licensed physicians will evaluate you and prescribe naltrexone if appropriate. However, we always recommend informing your primary care provider about any medications you're taking for your complete health picture.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How long do I need to take it?</div>
+                <div class="faq-answer">Most clinical studies use 3-6 month treatment periods. Some people take it long-term for maintenance; others taper off once their drinking habits have stabilized. Your Try Amie physician can help you decide what's right for your situation.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What if it doesn't work for me?</div>
+                <div class="faq-answer">That's what our 30-day money-back guarantee is for. If you don't see a meaningful difference in your cravings or drinking habits, we'll refund your purchase completely. No other telehealth naltrexone provider offers this.</div>
+            </div>
+        </section>
+
+        <!-- Mike's Conclusion -->
+        <section class="content-section">
+            <h2>Mike's story has a different ending now</h2>
+
+            <p class="story-text">Remember Mike from the beginning? The architect who couldn't stick to his "weekends only" rule?</p>
+
+            <p class="story-text">He started naltrexone three months ago.</p>
+
+            <p class="story-text highlight"><strong>"By week 2, I noticed something weird. I poured my usual glass of wine after work, took a few sips, and just... set it down. Forgot about it. That had literally never happened before."</strong></p>
+
+            <p class="story-text">Today, Mike drinks maybe 2-3 times a month. Socially. When he actually wants to – not because his brain is screaming for it.</p>
+
+            <p class="story-text">He's lost 15 pounds. His sleep has improved. His wife says he's "more present" than he's been in years.</p>
+
+            <p class="story-text"><strong>"I'm not anti-alcohol now,"</strong> Mike says. <strong>"I can still enjoy a nice bourbon on special occasions. The difference is that I'm choosing it – it's not choosing me."</strong></p>
+
+            <div class="cta-section">
+                <div class="cta-savings">FIRST MONTH JUST $99 (SAVE $20)</div>
+                <a href="https://tryamie.com/naltrexone" class="cta-button">Yes, I'm Ready to Drink Less</a>
+                <p class="cta-subtext">Free consultation • 30-day guarantee • Cancel anytime</p>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="content-section">
+            <h2>Join the 49% of Americans who are finally drinking less</h2>
+
+            <p class="story-text">2025 is different. Nearly half of Americans are actively trying to reduce their drinking. The "sober curious" movement is mainstream. The stigma is fading.</p>
+
+            <p class="story-text">And now there's a simple, science-backed tool to actually make it happen.</p>
+
+            <ul class="benefits-list">
+                <li>
+                    <div class="benefit-check">✓</div>
+                    <span><strong>FDA-approved medication</strong> that's been helping people since 1994</span>
+                </li>
+                <li>
+                    <div class="benefit-check">✓</div>
+                    <span><strong>One pill, once daily</strong> – no complicated protocols or tracking</span>
+                </li>
+                <li>
+                    <div class="benefit-check">✓</div>
+                    <span><strong>Works with your brain</strong>, not against it – no punishment, no willpower required</span>
+                </li>
+                <li>
+                    <div class="benefit-check">✓</div>
+                    <span><strong>Just $99 your first month</strong> ($119/mo after) plus our exclusive 30-day guarantee</span>
+                </li>
+                <li>
+                    <div class="benefit-check">✓</div>
+                    <span><strong>Discreet delivery</strong> directly to your door – nobody needs to know</span>
+                </li>
+            </ul>
+
+            <p class="story-text">The only question left: are you ready to take back control?</p>
+
+            <div class="cta-section">
+                <div class="cta-savings">LIMITED TIME: $99 FIRST MONTH</div>
+                <a href="https://tryamie.com/naltrexone" class="cta-button">Start My Free Consultation</a>
+                <p class="cta-subtext">Takes 5 minutes • 100% confidential • No obligation</p>
+                <div class="cta-trust">
+                    <span class="trust-item"><span>✓</span> 30-Day Money-Back Guarantee</span>
+                    <span class="trust-item"><span>✓</span> FDA-Approved</span>
+                    <span class="trust-item"><span>✓</span> Cancel Anytime</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PS Section -->
+        <div class="ps-section">
+            <p><strong>P.S.</strong> The average person who wants to drink less tries 4-5 different approaches before finding something that works. Most give up after each failure, convinced they just don't have enough willpower. But willpower isn't the issue – brain chemistry is. Naltrexone works directly on your reward pathways to quiet the cravings at their source. 73% of users see results within 2 weeks. And with our 30-day money-back guarantee (the only one in the industry), there's literally no risk to trying. <strong>Stop fighting your brain. Start working with it. Get started today.</strong></p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="footer-brand">Try Amie</div>
+        <p class="footer-disclaimer">Naltrexone is a prescription medication and is not right for everyone. It requires evaluation by a licensed healthcare provider. Do not take naltrexone if you use opioid medications or have acute liver disease. Common side effects may include nausea, headache, dizziness, and trouble sleeping. Individual results may vary. The testimonials on this page represent individual experiences and are not a guarantee of results. Always consult with a healthcare professional before starting any new medication.</p>
+        <p class="footer-copyright"><strong>© 2025 Try Amie</strong> | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
