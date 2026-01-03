@@ -10,46 +10,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Brand Colors - Try Amie System */
             --blush: #F5E6E0;
             --blush-light: #FAF5F3;
             --ivory: #FAF8F5;
             --teal: #2D7A7A;
             --teal-dark: #246666;
+            --teal-light: #E8F4F4;
             --sage: #9CAF88;
             --rose-gold: #B76E79;
             --grey: #4A4A4A;
             --grey-light: #6B6B6B;
             --grey-border: #E8E4E1;
             --white: #FFFFFF;
-
-            /* Functional */
             --success: #22C55E;
             --gold: #D4A853;
-
-            /* Typography */
             --font-display: 'Cormorant Garamond', Georgia, serif;
             --font-body: 'DM Sans', -apple-system, sans-serif;
-
-            /* Spacing - Tighter */
-            --space-xs: 4px;
-            --space-sm: 8px;
-            --space-md: 16px;
-            --space-lg: 24px;
-            --space-xl: 40px;
-            --space-2xl: 64px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: var(--font-body);
             background: var(--white);
@@ -57,21 +37,10 @@
             line-height: 1.6;
             font-size: 16px;
         }
+        ::selection { background: var(--rose-gold); color: var(--white); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-        ::selection {
-            background: var(--rose-gold);
-            color: var(--white);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 var(--space-lg);
-        }
-
-        /* ============================================
-           HEADER - Clean, minimal
-        ============================================ */
+        /* Header */
         .header {
             position: fixed;
             top: 0;
@@ -80,34 +49,18 @@
             z-index: 1000;
             background: var(--white);
             border-bottom: 1px solid var(--grey-border);
-            padding: var(--space-md) 0;
+            padding: 16px 0;
         }
-
-        .header-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
         .logo {
             font-family: var(--font-display);
             font-size: 26px;
             font-weight: 500;
             color: var(--grey);
             text-decoration: none;
-            letter-spacing: -0.02em;
         }
-
-        .logo span {
-            color: var(--teal);
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            gap: var(--space-xl);
-        }
-
+        .logo span { color: var(--teal); }
+        .nav { display: flex; align-items: center; gap: 32px; }
         .nav-link {
             font-size: 14px;
             font-weight: 500;
@@ -115,11 +68,7 @@
             text-decoration: none;
             transition: color 0.2s;
         }
-
-        .nav-link:hover {
-            color: var(--teal);
-        }
-
+        .nav-link:hover { color: var(--teal); }
         .btn {
             display: inline-flex;
             align-items: center;
@@ -134,666 +83,301 @@
             transition: all 0.2s ease;
             border-radius: 6px;
         }
-
-        .btn-primary {
-            background: var(--teal);
-            color: var(--white);
-        }
-
+        .btn-primary { background: var(--teal); color: var(--white); }
         .btn-primary:hover {
             background: var(--teal-dark);
             transform: translateY(-1px);
             box-shadow: 0 4px 12px rgba(45, 122, 122, 0.3);
         }
-
-        .btn-secondary {
-            background: var(--blush);
-            color: var(--grey);
-        }
-
-        .btn-secondary:hover {
-            background: #EDD9D2;
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--teal);
-            border: 1px solid var(--teal);
-        }
-
-        .btn-outline:hover {
-            background: var(--teal);
-            color: var(--white);
-        }
-
-        .btn-lg {
-            padding: 16px 32px;
-            font-size: 15px;
-        }
+        .btn-lg { padding: 16px 32px; font-size: 15px; }
+        .btn-full { width: 100%; }
 
         /* ============================================
-           HERO - Clean, conversion-focused
+           HERO - Cake Style Product Page
         ============================================ */
         .hero {
-            padding: 120px 0 var(--space-2xl);
-            background: linear-gradient(180deg, var(--blush-light) 0%, var(--white) 100%);
-        }
-
-        .hero-inner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-xl);
-            align-items: center;
-        }
-
-        .hero-content {
-            max-width: 520px;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-sm);
-            padding: 6px 12px;
+            padding: 100px 0 48px;
             background: var(--white);
-            border: 1px solid var(--grey-border);
-            border-radius: 20px;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 480px;
+            gap: 48px;
+            align-items: start;
+        }
+
+        /* Left: Image Gallery */
+        .product-gallery {
+            position: sticky;
+            top: 100px;
+        }
+        .main-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background: var(--blush-light);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+        .main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .thumbnail-row {
+            display: flex;
+            gap: 8px;
+        }
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .thumbnail.active { border-color: var(--teal); }
+        .thumbnail:hover { border-color: var(--grey-border); }
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Right: Product Info & Configurator */
+        .product-details {
+            padding-top: 20px;
+        }
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        .stars { color: var(--gold); font-size: 16px; letter-spacing: 1px; }
+        .rating-text { font-size: 14px; color: var(--grey-light); }
+        .product-title {
+            font-family: var(--font-display);
+            font-size: 36px;
+            font-weight: 500;
+            color: var(--grey);
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+        .product-subtitle {
+            font-size: 16px;
+            color: var(--grey-light);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Subscription Toggle */
+        .purchase-toggle {
+            display: flex;
+            background: var(--ivory);
+            border-radius: 8px;
+            padding: 4px;
+            margin-bottom: 20px;
+        }
+        .toggle-option {
+            flex: 1;
+            padding: 12px 16px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--grey-light);
+            background: transparent;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+        }
+        .toggle-option.active {
+            background: var(--white);
+            color: var(--grey);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .toggle-option .save-badge {
+            position: absolute;
+            top: -8px;
+            right: 8px;
+            background: var(--teal);
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* Dose Selection */
+        .dose-section {
+            margin-bottom: 24px;
+        }
+        .dose-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--grey);
+            margin-bottom: 10px;
+        }
+        .dose-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .dose-option {
+            border: 2px solid var(--grey-border);
+            border-radius: 10px;
+            padding: 16px 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: var(--white);
+        }
+        .dose-option:hover { border-color: var(--teal); }
+        .dose-option.active {
+            border-color: var(--teal);
+            background: var(--teal-light);
+        }
+        .dose-option.popular { position: relative; }
+        .dose-option.popular::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--rose-gold);
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+        .dose-count {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--grey);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .dose-text {
             font-size: 12px;
+            color: var(--grey-light);
+        }
+        .dose-price {
+            font-size: 14px;
             font-weight: 600;
             color: var(--teal);
-            margin-bottom: var(--space-md);
+            margin-top: 8px;
         }
-
-        .hero-badge::before {
-            content: '';
-            width: 6px;
-            height: 6px;
-            background: var(--teal);
-            border-radius: 50%;
-        }
-
-        .hero h1 {
-            font-family: var(--font-display);
-            font-size: clamp(36px, 5vw, 52px);
-            font-weight: 500;
-            line-height: 1.15;
-            color: var(--grey);
-            margin-bottom: var(--space-md);
-        }
-
-        .hero h1 em {
-            font-style: italic;
-            color: var(--rose-gold);
-        }
-
-        .hero-subtitle {
-            font-size: 17px;
-            line-height: 1.7;
+        .dose-price .original {
+            text-decoration: line-through;
             color: var(--grey-light);
-            margin-bottom: var(--space-lg);
+            font-weight: 400;
+            margin-right: 4px;
         }
 
-        .hero-cta {
-            display: flex;
-            gap: var(--space-md);
-            margin-bottom: var(--space-lg);
+        /* Price Display */
+        .price-display {
+            background: var(--ivory);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
         }
-
-        .hero-trust {
+        .price-row {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: var(--space-lg);
-            padding-top: var(--space-md);
+            margin-bottom: 8px;
+        }
+        .price-row:last-child { margin-bottom: 0; }
+        .price-label {
+            font-size: 14px;
+            color: var(--grey-light);
+        }
+        .price-value {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--grey);
+        }
+        .price-row.total {
+            border-top: 1px solid var(--grey-border);
+            padding-top: 12px;
+            margin-top: 12px;
+        }
+        .price-row.total .price-label {
+            font-weight: 600;
+            color: var(--grey);
+        }
+        .price-row.total .price-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--teal);
+        }
+        .price-savings {
+            background: var(--teal-light);
+            color: var(--teal);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-left: 8px;
+        }
+
+        /* CTA Button */
+        .cta-section {
+            margin-bottom: 20px;
+        }
+        .cta-section .btn {
+            margin-bottom: 12px;
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            padding: 16px 0;
             border-top: 1px solid var(--grey-border);
         }
-
-        .trust-item {
+        .trust-badge {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
-            font-size: 13px;
+            gap: 6px;
+            font-size: 12px;
             color: var(--grey-light);
         }
-
-        .trust-item svg {
+        .trust-badge svg {
             width: 16px;
             height: 16px;
             color: var(--teal);
         }
 
-        /* Hero Visual */
-        .hero-visual {
-            position: relative;
-            display: flex;
-            justify-content: center;
-        }
-
-        .product-card {
-            background: var(--white);
-            border-radius: 16px;
-            padding: var(--space-lg);
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
-            max-width: 400px;
-            width: 100%;
-        }
-
-        .product-image {
-            background: var(--blush-light);
-            border-radius: 12px;
-            padding: var(--space-xl);
-            margin-bottom: var(--space-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .product-image img {
-            max-width: 200px;
-            height: auto;
-        }
-
-        .product-info {
-            text-align: center;
-        }
-
-        .product-rating {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--space-sm);
-            margin-bottom: var(--space-sm);
-        }
-
-        .stars {
-            color: var(--gold);
-            font-size: 14px;
-            letter-spacing: 1px;
-        }
-
-        .rating-text {
-            font-size: 13px;
-            color: var(--grey-light);
-        }
-
-        .product-name {
-            font-family: var(--font-display);
-            font-size: 22px;
-            font-weight: 500;
-            color: var(--grey);
-            margin-bottom: var(--space-xs);
-        }
-
-        .product-price {
-            font-size: 15px;
-            color: var(--grey-light);
-            margin-bottom: var(--space-md);
-        }
-
-        .product-price strong {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--grey);
-        }
-
-        .product-badges {
-            display: flex;
-            justify-content: center;
-            gap: var(--space-sm);
-        }
-
-        .mini-badge {
-            padding: 4px 10px;
-            background: var(--ivory);
-            border-radius: 4px;
-            font-size: 11px;
-            font-weight: 600;
-            color: var(--grey-light);
-        }
-
         /* ============================================
-           SOCIAL PROOF BAR
+           IMPORTANT TO KNOW - FAQ Accordion
         ============================================ */
-        .social-proof-bar {
-            padding: var(--space-lg) 0;
-            background: var(--white);
-            border-bottom: 1px solid var(--grey-border);
+        .info-section {
+            padding: 48px 0;
+            border-top: 1px solid var(--grey-border);
         }
-
-        .proof-stats {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: var(--space-xl);
-        }
-
-        .proof-stat {
-            text-align: center;
-        }
-
-        .proof-number {
+        .info-section h2 {
             font-family: var(--font-display);
             font-size: 28px;
             font-weight: 500;
-            color: var(--teal);
-        }
-
-        .proof-label {
-            font-size: 12px;
-            color: var(--grey-light);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .proof-divider {
-            width: 1px;
-            height: 40px;
-            background: var(--grey-border);
-        }
-
-        /* ============================================
-           PROBLEM/SOLUTION - Compact
-        ============================================ */
-        .problem-section {
-            padding: var(--space-2xl) 0;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto var(--space-xl);
-        }
-
-        .section-eyebrow {
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--teal);
-            margin-bottom: var(--space-sm);
-        }
-
-        .section-header h2 {
-            font-family: var(--font-display);
-            font-size: clamp(28px, 4vw, 38px);
-            font-weight: 500;
-            line-height: 1.2;
             color: var(--grey);
-            margin-bottom: var(--space-sm);
+            margin-bottom: 24px;
         }
-
-        .section-header p {
-            font-size: 16px;
-            color: var(--grey-light);
+        .accordion-item {
+            border-bottom: 1px solid var(--grey-border);
         }
-
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-md);
-        }
-
-        .problem-card {
-            background: var(--ivory);
-            border-radius: 12px;
-            padding: var(--space-lg);
-            border: 1px solid transparent;
-            transition: all 0.2s ease;
-        }
-
-        .problem-card:hover {
-            border-color: var(--grey-border);
-            transform: translateY(-2px);
-        }
-
-        .problem-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--blush);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: var(--space-md);
-            font-size: 20px;
-        }
-
-        .problem-card h3 {
-            font-family: var(--font-display);
-            font-size: 20px;
-            font-weight: 500;
-            color: var(--grey);
-            margin-bottom: var(--space-sm);
-        }
-
-        .problem-card p {
-            font-size: 14px;
-            color: var(--grey-light);
-            line-height: 1.6;
-        }
-
-        /* ============================================
-           SOLUTION SECTION
-        ============================================ */
-        .solution-section {
-            padding: var(--space-2xl) 0;
-            background: var(--blush-light);
-        }
-
-        .solution-inner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-xl);
-            align-items: center;
-        }
-
-        .solution-image {
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .solution-image img {
+        .accordion-btn {
             width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .solution-content h2 {
-            font-family: var(--font-display);
-            font-size: clamp(28px, 4vw, 36px);
-            font-weight: 500;
-            line-height: 1.2;
-            color: var(--grey);
-            margin-bottom: var(--space-md);
-        }
-
-        .solution-content h2 em {
-            font-style: italic;
-            color: var(--rose-gold);
-        }
-
-        .solution-content .lead {
-            font-size: 16px;
-            color: var(--grey-light);
-            margin-bottom: var(--space-lg);
-            line-height: 1.7;
-        }
-
-        .benefit-list {
+            padding: 20px 0;
             display: flex;
-            flex-direction: column;
-            gap: var(--space-md);
-            margin-bottom: var(--space-lg);
-        }
-
-        .benefit-item {
-            display: flex;
-            gap: var(--space-md);
-        }
-
-        .benefit-icon {
-            width: 24px;
-            height: 24px;
-            background: var(--teal);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .benefit-icon svg {
-            width: 12px;
-            height: 12px;
-            color: var(--white);
-        }
-
-        .benefit-text h4 {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--grey);
-            margin-bottom: 2px;
-        }
-
-        .benefit-text p {
-            font-size: 14px;
-            color: var(--grey-light);
-        }
-
-        /* ============================================
-           HOW IT WORKS
-        ============================================ */
-        .how-section {
-            padding: var(--space-2xl) 0;
-        }
-
-        .how-steps {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: var(--space-md);
-        }
-
-        .how-step {
-            text-align: center;
-            padding: var(--space-lg);
-            background: var(--white);
-            border: 1px solid var(--grey-border);
-            border-radius: 12px;
-            position: relative;
-        }
-
-        .step-number {
-            width: 48px;
-            height: 48px;
-            background: var(--teal);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto var(--space-md);
-            font-family: var(--font-display);
-            font-size: 20px;
-            font-weight: 500;
-            color: var(--white);
-        }
-
-        .how-step h3 {
-            font-family: var(--font-display);
-            font-size: 18px;
-            font-weight: 500;
-            color: var(--grey);
-            margin-bottom: var(--space-xs);
-        }
-
-        .how-step p {
-            font-size: 13px;
-            color: var(--grey-light);
-            line-height: 1.5;
-        }
-
-        /* ============================================
-           TESTIMONIALS
-        ============================================ */
-        .testimonials-section {
-            padding: var(--space-2xl) 0;
-            background: var(--ivory);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-md);
-        }
-
-        .testimonial-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: var(--space-lg);
-            border: 1px solid var(--grey-border);
-        }
-
-        .testimonial-card.featured {
-            grid-row: span 2;
-            background: linear-gradient(135deg, var(--blush) 0%, var(--blush-light) 100%);
-            border: none;
-        }
-
-        .testimonial-stars {
-            color: var(--gold);
-            font-size: 14px;
-            letter-spacing: 1px;
-            margin-bottom: var(--space-md);
-        }
-
-        .testimonial-text {
-            font-size: 15px;
-            line-height: 1.7;
-            color: var(--grey);
-            margin-bottom: var(--space-md);
-        }
-
-        .testimonial-card.featured .testimonial-text {
-            font-family: var(--font-display);
-            font-size: 20px;
-            font-style: italic;
-            line-height: 1.5;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-        }
-
-        .author-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--grey-border);
-            overflow: hidden;
-        }
-
-        .author-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .author-name {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--grey);
-        }
-
-        .author-meta {
-            font-size: 12px;
-            color: var(--grey-light);
-        }
-
-        /* ============================================
-           UGC GALLERY
-        ============================================ */
-        .ugc-section {
-            padding: var(--space-2xl) 0;
-        }
-
-        .ugc-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: var(--space-sm);
-        }
-
-        .ugc-item {
-            position: relative;
-            aspect-ratio: 1;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .ugc-item.large {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        .ugc-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .ugc-item:hover img {
-            transform: scale(1.03);
-        }
-
-        .ugc-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: var(--space-md);
-            background: linear-gradient(transparent, rgba(0,0,0,0.6));
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .ugc-item:hover .ugc-overlay {
-            opacity: 1;
-        }
-
-        .ugc-handle {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--white);
-        }
-
-        /* ============================================
-           FAQ
-        ============================================ */
-        .faq-section {
-            padding: var(--space-2xl) 0;
-            background: var(--blush-light);
-        }
-
-        .faq-inner {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: var(--space-xl);
-            align-items: start;
-        }
-
-        .faq-header h2 {
-            font-family: var(--font-display);
-            font-size: 32px;
-            font-weight: 500;
-            color: var(--grey);
-            margin-bottom: var(--space-md);
-        }
-
-        .faq-header p {
-            font-size: 15px;
-            color: var(--grey-light);
-            margin-bottom: var(--space-md);
-        }
-
-        .faq-list {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-sm);
-        }
-
-        .faq-item {
-            background: var(--white);
-            border-radius: 8px;
-            border: 1px solid var(--grey-border);
-            overflow: hidden;
-        }
-
-        .faq-question {
-            width: 100%;
-            padding: var(--space-md);
-            display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
             background: none;
             border: none;
             font-family: var(--font-body);
@@ -803,99 +387,398 @@
             text-align: left;
             cursor: pointer;
         }
+        .accordion-btn:hover { color: var(--teal); }
+        .accordion-btn svg {
+            width: 20px;
+            height: 20px;
+            color: var(--grey-light);
+            transition: transform 0.3s;
+        }
+        .accordion-item.active .accordion-btn svg { transform: rotate(180deg); }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .accordion-content-inner {
+            padding-bottom: 20px;
+            font-size: 14px;
+            color: var(--grey-light);
+            line-height: 1.7;
+        }
+        .accordion-item.active .accordion-content { max-height: 500px; }
 
-        .faq-question:hover {
+        /* ============================================
+           WHY CHOOSE SECTION
+        ============================================ */
+        .why-section {
+            padding: 64px 0;
+            background: var(--blush-light);
+        }
+        .why-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .why-header h2 {
+            font-family: var(--font-display);
+            font-size: 32px;
+            font-weight: 500;
+            color: var(--grey);
+            margin-bottom: 8px;
+        }
+        .why-header p {
+            font-size: 16px;
+            color: var(--grey-light);
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .why-card {
+            text-align: center;
+            padding: 24px;
+            background: var(--white);
+            border-radius: 12px;
+        }
+        .why-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--teal-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+        .why-icon svg {
+            width: 28px;
+            height: 28px;
             color: var(--teal);
         }
+        .why-card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--grey);
+            margin-bottom: 8px;
+        }
+        .why-card p {
+            font-size: 13px;
+            color: var(--grey-light);
+            line-height: 1.5;
+        }
 
+        /* ============================================
+           HOW IT WORKS - Cake Style
+        ============================================ */
+        .how-section {
+            padding: 64px 0;
+        }
+        .how-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .how-header h2 {
+            font-family: var(--font-display);
+            font-size: 32px;
+            font-weight: 500;
+            color: var(--grey);
+            margin-bottom: 8px;
+        }
+        .how-header p {
+            font-size: 16px;
+            color: var(--grey-light);
+        }
+        .how-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .how-step {
+            display: flex;
+            gap: 20px;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--grey-border);
+        }
+        .how-step:last-child { border-bottom: none; }
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--teal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+        .step-content h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--grey);
+            margin-bottom: 4px;
+        }
+        .step-content p {
+            font-size: 14px;
+            color: var(--grey-light);
+        }
+        .how-cta {
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        /* ============================================
+           FEATURED TESTIMONIAL
+        ============================================ */
+        .testimonial-feature {
+            padding: 64px 0;
+            background: var(--blush);
+        }
+        .testimonial-inner {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 48px;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .testimonial-product {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+        }
+        .testimonial-product img {
+            max-width: 120px;
+            margin-bottom: 12px;
+        }
+        .testimonial-product-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--grey);
+        }
+        .testimonial-quote {
+            font-family: var(--font-display);
+            font-size: 32px;
+            font-style: italic;
+            line-height: 1.3;
+            color: var(--grey);
+            margin-bottom: 16px;
+        }
+        .testimonial-author {
+            font-size: 14px;
+            color: var(--grey-light);
+        }
+
+        /* ============================================
+           REVIEWS SECTION
+        ============================================ */
+        .reviews-section {
+            padding: 64px 0;
+        }
+        .reviews-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 32px;
+        }
+        .reviews-summary h2 {
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 500;
+            color: var(--grey);
+            margin-bottom: 8px;
+        }
+        .reviews-summary .stars-large {
+            color: var(--gold);
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+        .reviews-summary .review-count {
+            font-size: 14px;
+            color: var(--grey-light);
+            margin-left: 8px;
+        }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .review-card {
+            background: var(--ivory);
+            border-radius: 12px;
+            padding: 24px;
+        }
+        .review-stars {
+            color: var(--gold);
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        .review-text {
+            font-size: 14px;
+            color: var(--grey);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        .review-author {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--grey);
+        }
+        .review-meta {
+            font-size: 12px;
+            color: var(--grey-light);
+        }
+
+        /* ============================================
+           UGC GALLERY
+        ============================================ */
+        .ugc-section {
+            padding: 64px 0;
+            background: var(--ivory);
+        }
+        .ugc-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .ugc-header h2 {
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 500;
+            color: var(--grey);
+        }
+        .ugc-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+        .ugc-item {
+            aspect-ratio: 1;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .ugc-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .ugc-item:hover img { transform: scale(1.05); }
+
+        /* ============================================
+           FAQ FULL SECTION
+        ============================================ */
+        .faq-section {
+            padding: 64px 0;
+        }
+        .faq-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .faq-header h2 {
+            font-family: var(--font-display);
+            font-size: 32px;
+            font-weight: 500;
+            color: var(--grey);
+        }
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: var(--ivory);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .faq-question {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: none;
+            border: none;
+            font-family: var(--font-body);
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--grey);
+            text-align: left;
+            cursor: pointer;
+        }
+        .faq-question:hover { color: var(--teal); }
         .faq-question svg {
             width: 18px;
             height: 18px;
             color: var(--grey-light);
             transition: transform 0.2s;
+            flex-shrink: 0;
+            margin-left: 12px;
         }
-
-        .faq-item.active .faq-question svg {
-            transform: rotate(45deg);
-        }
-
+        .faq-item.active .faq-question svg { transform: rotate(45deg); }
         .faq-answer {
-            padding: 0 var(--space-md) var(--space-md);
-            font-size: 14px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s;
+        }
+        .faq-answer-inner {
+            padding: 0 20px 20px;
+            font-size: 13px;
             color: var(--grey-light);
-            line-height: 1.7;
-            display: none;
+            line-height: 1.6;
         }
-
-        .faq-item.active .faq-answer {
-            display: block;
-        }
+        .faq-item.active .faq-answer { max-height: 300px; }
 
         /* ============================================
            FINAL CTA
         ============================================ */
         .final-cta {
-            padding: var(--space-2xl) 0;
+            padding: 64px 0;
             background: var(--teal);
             text-align: center;
         }
-
         .final-cta h2 {
             font-family: var(--font-display);
-            font-size: clamp(28px, 4vw, 40px);
+            font-size: 36px;
             font-weight: 500;
             color: var(--white);
-            margin-bottom: var(--space-sm);
+            margin-bottom: 12px;
         }
-
         .final-cta p {
             font-size: 16px;
             color: rgba(255,255,255,0.8);
-            margin-bottom: var(--space-lg);
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 24px;
         }
-
-        .final-cta .btn-primary {
+        .final-cta .btn {
             background: var(--white);
             color: var(--teal);
         }
-
-        .final-cta .btn-primary:hover {
+        .final-cta .btn:hover {
             background: var(--ivory);
             transform: translateY(-2px);
-        }
-
-        .guarantee-text {
-            margin-top: var(--space-md);
-            font-size: 13px;
-            color: rgba(255,255,255,0.7);
-        }
-
-        .guarantee-text svg {
-            width: 14px;
-            height: 14px;
-            vertical-align: middle;
-            margin-right: 4px;
         }
 
         /* ============================================
            FOOTER
         ============================================ */
         .footer {
-            padding: var(--space-xl) 0 var(--space-lg);
+            padding: 40px 0 24px;
             background: var(--white);
             border-top: 1px solid var(--grey-border);
         }
-
         .footer-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: var(--space-lg);
+            margin-bottom: 24px;
         }
-
         .footer-logo {
             font-family: var(--font-display);
             font-size: 22px;
@@ -903,138 +786,67 @@
             color: var(--grey);
             text-decoration: none;
         }
-
-        .footer-links {
-            display: flex;
-            gap: var(--space-lg);
-        }
-
+        .footer-links { display: flex; gap: 24px; }
         .footer-link {
             font-size: 14px;
             color: var(--grey-light);
             text-decoration: none;
         }
-
-        .footer-link:hover {
-            color: var(--teal);
-        }
-
+        .footer-link:hover { color: var(--teal); }
         .footer-bottom {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: var(--space-md);
+            padding-top: 16px;
             border-top: 1px solid var(--grey-border);
             font-size: 13px;
             color: var(--grey-light);
         }
-
-        .footer-legal {
-            display: flex;
-            gap: var(--space-md);
-        }
-
+        .footer-legal { display: flex; gap: 16px; }
         .footer-legal a {
             color: var(--grey-light);
             text-decoration: none;
         }
-
-        .footer-legal a:hover {
-            color: var(--grey);
-        }
+        .footer-legal a:hover { color: var(--grey); }
 
         /* ============================================
            RESPONSIVE
         ============================================ */
         @media (max-width: 1024px) {
-            .hero-inner,
-            .solution-inner,
-            .faq-inner {
+            .hero-grid {
                 grid-template-columns: 1fr;
-                gap: var(--space-lg);
+                gap: 32px;
             }
-
-            .hero-content {
+            .product-gallery {
+                position: relative;
+                top: 0;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
+            .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+            .ugc-grid { grid-template-columns: repeat(3, 1fr); }
+            .faq-grid { grid-template-columns: 1fr; }
+            .testimonial-inner {
+                grid-template-columns: 1fr;
                 text-align: center;
-                max-width: 100%;
             }
-
-            .hero-cta {
-                justify-content: center;
-            }
-
-            .hero-trust {
-                justify-content: center;
-            }
-
-            .problem-grid,
-            .how-steps,
-            .testimonials-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .testimonial-card.featured {
-                grid-column: span 2;
-                grid-row: span 1;
-            }
-
-            .ugc-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .ugc-item.large {
-                grid-column: span 2;
-                grid-row: span 1;
+            .testimonial-product {
+                max-width: 200px;
+                margin: 0 auto;
             }
         }
 
         @media (max-width: 768px) {
-            .nav {
-                display: none;
-            }
-
-            .hero {
-                padding-top: 100px;
-            }
-
-            .problem-grid,
-            .how-steps,
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .testimonial-card.featured {
-                grid-column: span 1;
-            }
-
-            .proof-stats {
-                flex-wrap: wrap;
-                gap: var(--space-md);
-            }
-
-            .proof-divider {
-                display: none;
-            }
-
-            .footer-inner {
-                flex-direction: column;
-                gap: var(--space-md);
-                text-align: center;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: var(--space-sm);
-                text-align: center;
-            }
-
-            .faq-inner {
-                gap: var(--space-lg);
-            }
-
-            .faq-header {
-                text-align: center;
-            }
+            .nav { display: none; }
+            .hero { padding-top: 80px; }
+            .why-grid { grid-template-columns: 1fr; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .ugc-grid { grid-template-columns: repeat(2, 1fr); }
+            .reviews-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+            .footer-inner { flex-direction: column; gap: 16px; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+            .dose-options { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -1051,64 +863,141 @@
                     <a href="#how-it-works" class="nav-link">How It Works</a>
                     <a href="#faq" class="nav-link">FAQ</a>
                 </nav>
-                <a href="#get-started" class="btn btn-primary">Get Started</a>
+                <a href="#" class="btn btn-primary">Get Started</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero -->
+    <!-- Hero: Product Page -->
     <section class="hero">
         <div class="container">
-            <div class="hero-inner">
-                <div class="hero-content">
-                    <div class="hero-badge">Prescription Treatment</div>
-                    <h1>Rediscover your <em>desire</em></h1>
-                    <p class="hero-subtitle">
-                        The Little Pink Pill is a clinically proven prescription treatment that helps women naturally boost libido. Doctor-prescribed. Delivered discreetly.
-                    </p>
-                    <div class="hero-cta">
-                        <a href="#get-started" class="btn btn-primary btn-lg">Start Consultation</a>
-                        <a href="#how-it-works" class="btn btn-outline btn-lg">How It Works</a>
+            <div class="hero-grid">
+                <!-- Left: Product Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image" id="mainImage">
+                        <img src="images/ugc/lpp-ugc-sarah.jpg" alt="Little Pink Pill" id="mainImageSrc">
                     </div>
-                    <div class="hero-trust">
-                        <div class="trust-item">
+                    <div class="thumbnail-row">
+                        <div class="thumbnail active" onclick="changeImage('images/ugc/lpp-ugc-sarah.jpg', this)">
+                            <img src="images/ugc/lpp-ugc-sarah.jpg" alt="Product view 1">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage('images/ugc/lpp-ugc-michelle.jpg', this)">
+                            <img src="images/ugc/lpp-ugc-michelle.jpg" alt="Product view 2">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage('images/ugc/lpp-ugc-jennifer.jpg', this)">
+                            <img src="images/ugc/lpp-ugc-jennifer.jpg" alt="Product view 3">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage('images/ugc/lpp-ugc-priya.jpg', this)">
+                            <img src="images/ugc/lpp-ugc-priya.jpg" alt="Product view 4">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage('images/ugc/lpp-ugc-denise.jpg', this)">
+                            <img src="images/ugc/lpp-ugc-denise.jpg" alt="Product view 5">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Product Details & Configurator -->
+                <div class="product-details">
+                    <div class="product-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">4.9 (2,847 reviews)</span>
+                    </div>
+                    <h1 class="product-title">Little Pink Pill</h1>
+                    <p class="product-subtitle">
+                        Clinically proven PT-141 to naturally boost libido and desire. Doctor-prescribed. Delivered discreetly to your door.
+                    </p>
+
+                    <!-- Subscription Toggle -->
+                    <div class="purchase-toggle">
+                        <button class="toggle-option active" data-type="subscribe" onclick="togglePurchase('subscribe')">
+                            Subscribe
+                            <span class="save-badge">Save 10%</span>
+                        </button>
+                        <button class="toggle-option" data-type="onetime" onclick="togglePurchase('onetime')">
+                            One-Time Purchase
+                        </button>
+                    </div>
+
+                    <!-- Dose Selection -->
+                    <div class="dose-section">
+                        <div class="dose-label">Select Your Plan</div>
+                        <div class="dose-options">
+                            <div class="dose-option" data-doses="10" data-price="99" onclick="selectDose(this)">
+                                <div class="dose-count">10</div>
+                                <div class="dose-text">doses</div>
+                                <div class="dose-price">
+                                    <span class="subscribe-price"><span class="original">$99</span> $89</span>
+                                    <span class="onetime-price" style="display:none;">$99</span>
+                                </div>
+                            </div>
+                            <div class="dose-option popular active" data-doses="20" data-price="179" onclick="selectDose(this)">
+                                <div class="dose-count">20</div>
+                                <div class="dose-text">doses</div>
+                                <div class="dose-price">
+                                    <span class="subscribe-price"><span class="original">$179</span> $161</span>
+                                    <span class="onetime-price" style="display:none;">$179</span>
+                                </div>
+                            </div>
+                            <div class="dose-option" data-doses="30" data-price="249" onclick="selectDose(this)">
+                                <div class="dose-count">30</div>
+                                <div class="dose-text">doses</div>
+                                <div class="dose-price">
+                                    <span class="subscribe-price"><span class="original">$249</span> $224</span>
+                                    <span class="onetime-price" style="display:none;">$249</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Price Display -->
+                    <div class="price-display">
+                        <div class="price-row">
+                            <span class="price-label">Plan</span>
+                            <span class="price-value" id="planDisplay">20 doses</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">Frequency</span>
+                            <span class="price-value" id="frequencyDisplay">Monthly subscription</span>
+                        </div>
+                        <div class="price-row" id="savingsRow">
+                            <span class="price-label">You save</span>
+                            <span class="price-value" id="savingsDisplay">$18 (10%)</span>
+                        </div>
+                        <div class="price-row total">
+                            <span class="price-label">Total</span>
+                            <span class="price-value" id="totalDisplay">$161</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="cta-section">
+                        <button class="btn btn-primary btn-lg btn-full">Start Consultation</button>
+                        <p style="font-size: 12px; color: var(--grey-light); text-align: center;">
+                            Prescription required. If not approved, you won't be charged.
+                        </p>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="trust-badges">
+                        <div class="trust-badge">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
                             </svg>
-                            Licensed physicians
+                            Licensed Physicians
                         </div>
-                        <div class="trust-item">
+                        <div class="trust-badge">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                                 <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                             </svg>
-                            Discreet delivery
+                            Discreet Packaging
                         </div>
-                        <div class="trust-item">
+                        <div class="trust-badge">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                             </svg>
-                            Satisfaction guarantee
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/little-pink-pill.png" alt="Little Pink Pill">
-                        </div>
-                        <div class="product-info">
-                            <div class="product-rating">
-                                <span class="stars">★★★★★</span>
-                                <span class="rating-text">4.9 (2,847 reviews)</span>
-                            </div>
-                            <h2 class="product-name">Little Pink Pill</h2>
-                            <p class="product-price">Starting at <strong>$99</strong>/month</p>
-                            <div class="product-badges">
-                                <span class="mini-badge">Rx Required</span>
-                                <span class="mini-badge">Free Shipping</span>
-                            </div>
+                            Free Shipping
                         </div>
                     </div>
                 </div>
@@ -1116,110 +1005,113 @@
         </div>
     </section>
 
-    <!-- Social Proof Bar -->
-    <section class="social-proof-bar">
+    <!-- Important to Know -->
+    <section class="info-section">
         <div class="container">
-            <div class="proof-stats">
-                <div class="proof-stat">
-                    <div class="proof-number">15,000+</div>
-                    <div class="proof-label">Women Helped</div>
-                </div>
-                <div class="proof-divider"></div>
-                <div class="proof-stat">
-                    <div class="proof-number">87%</div>
-                    <div class="proof-label">Report Increased Desire</div>
-                </div>
-                <div class="proof-divider"></div>
-                <div class="proof-stat">
-                    <div class="proof-number">2-4 Weeks</div>
-                    <div class="proof-label">To See Results</div>
-                </div>
-                <div class="proof-divider"></div>
-                <div class="proof-stat">
-                    <div class="proof-number">4.9/5</div>
-                    <div class="proof-label">Patient Rating</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section class="problem-section">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">You're Not Alone</p>
-                <h2>Low libido affects 1 in 3 women</h2>
-                <p>It's not your fault. Hormones, stress, and life transitions can all play a role.</p>
-            </div>
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <div class="problem-icon">🌙</div>
-                    <h3>Hormonal changes</h3>
-                    <p>Perimenopause, menopause, and post-pregnancy can dramatically affect desire.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">⚡</div>
-                    <h3>Chronic stress</h3>
-                    <p>Your brain's stress response can override your body's natural desire signals.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">💔</div>
-                    <h3>Relationship strain</h3>
-                    <p>Low desire creates distance. Distance creates more stress. The cycle continues.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section class="solution-section">
-        <div class="container">
-            <div class="solution-inner">
-                <div class="solution-image">
-                    <img src="images/ugc/lpp-ugc-priya.jpg" alt="Woman with Little Pink Pill">
-                </div>
-                <div class="solution-content">
-                    <p class="section-eyebrow">The Solution</p>
-                    <h2>A treatment that works with your <em>brain</em></h2>
-                    <p class="lead">
-                        The Little Pink Pill (PT-141) works differently. It activates receptors in your brain to naturally enhance desire—not just blood flow.
-                    </p>
-                    <div class="benefit-list">
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
-                            </div>
-                            <div class="benefit-text">
-                                <h4>Clinically Proven</h4>
-                                <p>87% of women report increased desire within 8 weeks</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
-                            </div>
-                            <div class="benefit-text">
-                                <h4>Doctor Prescribed</h4>
-                                <p>Licensed physicians ensure it's right for you</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
-                            </div>
-                            <div class="benefit-text">
-                                <h4>Discreet & Private</h4>
-                                <p>Plain packaging, no pharmacy visits needed</p>
-                            </div>
+            <h2>Important to Know</h2>
+            <div class="accordion-list">
+                <div class="accordion-item">
+                    <button class="accordion-btn">
+                        What is the Little Pink Pill?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            The Little Pink Pill contains PT-141 (Bremelanotide), a prescription medication that works by activating melanocortin receptors in your brain. Unlike other treatments that focus on blood flow, PT-141 targets the neurological pathways that control sexual desire and arousal.
                         </div>
                     </div>
-                    <a href="#get-started" class="btn btn-primary btn-lg">Start Your Consultation</a>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">
+                        How do I take the Little Pink Pill?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            PT-141 is administered as a subcutaneous injection approximately 45 minutes before anticipated sexual activity. Each dose comes pre-measured for your convenience. Most women find the process simple after the first use. We provide detailed instructions and support.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">
+                        What are the potential side effects?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            Common side effects may include flushing, nausea, and headache. These are typically mild and temporary. Our physicians will review your health history to ensure PT-141 is appropriate for you and discuss any potential risks.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">
+                        Who should not use this treatment?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            PT-141 is not recommended for women with uncontrolled high blood pressure, cardiovascular disease, or those who are pregnant or breastfeeding. Our physicians will conduct a thorough review of your health history during the consultation process.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose -->
+    <section class="why-section">
+        <div class="container">
+            <div class="why-header">
+                <h2>Why Choose Amie for Your Treatment?</h2>
+                <p>We make getting the care you need simple, private, and affordable.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <h3>Clinically Proven</h3>
+                    <p>87% of women report increased desire within 8 weeks of treatment.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3>Licensed Physicians</h3>
+                    <p>Board-certified doctors review every consultation within 24 hours.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3>Discreet & Private</h3>
+                    <p>Plain packaging with no indication of contents. Your privacy is our priority.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Fast Results</h3>
+                    <p>Most women notice changes within 2-4 weeks of starting treatment.</p>
                 </div>
             </div>
         </div>
@@ -1228,106 +1120,108 @@
     <!-- How It Works -->
     <section class="how-section" id="how-it-works">
         <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">Simple Process</p>
-                <h2>How it works</h2>
-                <p>Get started in minutes. Treatment delivered to your door.</p>
+            <div class="how-header">
+                <h2>How It Works</h2>
+                <p>Getting started takes just 5 minutes</p>
             </div>
             <div class="how-steps">
                 <div class="how-step">
                     <div class="step-number">1</div>
-                    <h3>Quick Assessment</h3>
-                    <p>Answer questions about your health history. Takes 5 minutes.</p>
+                    <div class="step-content">
+                        <h3>Complete Your Assessment</h3>
+                        <p>Answer a few questions about your health history and symptoms. Takes about 5 minutes.</p>
+                    </div>
                 </div>
                 <div class="how-step">
                     <div class="step-number">2</div>
-                    <h3>Doctor Review</h3>
-                    <p>A licensed physician reviews your profile within 24 hours.</p>
+                    <div class="step-content">
+                        <h3>Doctor Reviews Your Profile</h3>
+                        <p>A licensed physician reviews your information and determines if treatment is right for you.</p>
+                    </div>
                 </div>
                 <div class="how-step">
                     <div class="step-number">3</div>
-                    <h3>Discreet Delivery</h3>
-                    <p>Prescription arrives in plain, unmarked packaging.</p>
+                    <div class="step-content">
+                        <h3>Receive Your Treatment</h3>
+                        <p>If approved, your prescription ships free in discreet packaging within 2-3 days.</p>
+                    </div>
                 </div>
                 <div class="how-step">
                     <div class="step-number">4</div>
-                    <h3>Feel the Difference</h3>
-                    <p>Most women notice changes within 2-4 weeks.</p>
+                    <div class="step-content">
+                        <h3>Ongoing Support</h3>
+                        <p>Message your care team anytime. Adjust your treatment as needed.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="how-cta">
+                <a href="#" class="btn btn-primary btn-lg">Start Your Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Testimonial -->
+    <section class="testimonial-feature">
+        <div class="container">
+            <div class="testimonial-inner">
+                <div class="testimonial-product">
+                    <img src="images/little-pink-pill.png" alt="Little Pink Pill">
+                    <div class="testimonial-product-name">Little Pink Pill</div>
+                </div>
+                <div class="testimonial-content">
+                    <p class="testimonial-quote">"Having tried other brands before, all I can say is WOW!"</p>
+                    <p class="testimonial-author">— Sarah M., 47 · Denver, CO · Verified Customer</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials-section">
+    <!-- Reviews -->
+    <section class="reviews-section">
         <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">Real Stories</p>
-                <h2>What women are saying</h2>
+            <div class="reviews-header">
+                <div class="reviews-summary">
+                    <h2>Customer Reviews</h2>
+                    <span class="stars-large">★★★★★</span>
+                    <span class="review-count">4.9 out of 5 · 2,847 reviews</span>
+                </div>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card featured">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        "I thought low libido was just part of getting older. I was wrong. After 3 weeks, my husband asked what changed. I just smiled."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="images/testimonials/testimonial-1.jpg" alt="Sarah M.">
-                        </div>
-                        <div>
-                            <div class="author-name">Sarah M., 47</div>
-                            <div class="author-meta">Denver, CO · Verified</div>
-                        </div>
-                    </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"I thought low libido was just part of getting older. I was wrong. After 3 weeks, my husband asked what changed. I just smiled."</p>
+                    <div class="review-author">Sarah M., 47</div>
+                    <div class="review-meta">Denver, CO · Verified Purchase</div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        "The consultation was so easy and private. No awkward pharmacy visits. Now I feel like I did in my 30s."
-                    </p>
-                    <div class="testimonial-author">
-                        <div>
-                            <div class="author-name">Michelle K., 52</div>
-                            <div class="author-meta">Austin, TX</div>
-                        </div>
-                    </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The consultation was so easy and private. No awkward pharmacy visits. Now I feel like I did in my 30s."</p>
+                    <div class="review-author">Michelle K., 52</div>
+                    <div class="review-meta">Austin, TX · Verified Purchase</div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        "Finally something that actually works. This has been a game-changer for our relationship."
-                    </p>
-                    <div class="testimonial-author">
-                        <div>
-                            <div class="author-name">Jennifer L., 44</div>
-                            <div class="author-meta">Seattle, WA</div>
-                        </div>
-                    </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Finally something that actually works. This has been a game-changer for our relationship."</p>
+                    <div class="review-author">Jennifer L., 44</div>
+                    <div class="review-meta">Seattle, WA · Verified Purchase</div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        "I was skeptical, but the science convinced me. So glad I gave it a try."
-                    </p>
-                    <div class="testimonial-author">
-                        <div>
-                            <div class="author-name">Amanda R., 39</div>
-                            <div class="author-meta">Miami, FL</div>
-                        </div>
-                    </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"I was skeptical, but the science convinced me. So glad I gave it a try."</p>
+                    <div class="review-author">Amanda R., 39</div>
+                    <div class="review-meta">Miami, FL · Verified Purchase</div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        "Discreet packaging, no judgment, real results. What more could you ask for?"
-                    </p>
-                    <div class="testimonial-author">
-                        <div>
-                            <div class="author-name">Rachel S., 41</div>
-                            <div class="author-meta">Chicago, IL</div>
-                        </div>
-                    </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Discreet packaging, no judgment, real results. What more could you ask for?"</p>
+                    <div class="review-author">Rachel S., 41</div>
+                    <div class="review-meta">Chicago, IL · Verified Purchase</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"My confidence is back. I feel like myself again. Thank you Amie!"</p>
+                    <div class="review-author">Priya R., 45</div>
+                    <div class="review-meta">San Francisco, CA · Verified Purchase</div>
                 </div>
             </div>
         </div>
@@ -1336,113 +1230,117 @@
     <!-- UGC Gallery -->
     <section class="ugc-section">
         <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">Real Women, Real Results</p>
-                <h2>Join the community</h2>
+            <div class="ugc-header">
+                <h2>Real Women, Real Results</h2>
             </div>
             <div class="ugc-grid">
-                <div class="ugc-item large">
-                    <img src="images/ugc/lpp-ugc-sarah.jpg" alt="Sarah holding Little Pink Pill">
-                    <div class="ugc-overlay">
-                        <span class="ugc-handle">@sarah_m</span>
-                    </div>
+                <div class="ugc-item">
+                    <img src="images/ugc/lpp-ugc-sarah.jpg" alt="Customer photo">
                 </div>
                 <div class="ugc-item">
-                    <img src="images/ugc/lpp-ugc-michelle.jpg" alt="Michelle with Little Pink Pill">
-                    <div class="ugc-overlay">
-                        <span class="ugc-handle">@michelle_k</span>
-                    </div>
+                    <img src="images/ugc/lpp-ugc-michelle.jpg" alt="Customer photo">
                 </div>
                 <div class="ugc-item">
-                    <img src="images/ugc/lpp-ugc-jennifer.jpg" alt="Jennifer with Little Pink Pill">
-                    <div class="ugc-overlay">
-                        <span class="ugc-handle">@jen_wellness</span>
-                    </div>
+                    <img src="images/ugc/lpp-ugc-jennifer.jpg" alt="Customer photo">
                 </div>
                 <div class="ugc-item">
-                    <img src="images/ugc/lpp-ugc-priya.jpg" alt="Priya with Little Pink Pill">
-                    <div class="ugc-overlay">
-                        <span class="ugc-handle">@priya_r</span>
-                    </div>
+                    <img src="images/ugc/lpp-ugc-priya.jpg" alt="Customer photo">
                 </div>
                 <div class="ugc-item">
-                    <img src="images/ugc/lpp-ugc-denise.jpg" alt="Denise with Little Pink Pill">
-                    <div class="ugc-overlay">
-                        <span class="ugc-handle">@denise_w</span>
-                    </div>
+                    <img src="images/ugc/lpp-ugc-denise.jpg" alt="Customer photo">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- FAQ Full -->
     <section class="faq-section" id="faq">
         <div class="container">
-            <div class="faq-inner">
-                <div class="faq-header">
-                    <h2>Frequently asked questions</h2>
-                    <p>Have more questions? Our care team is here to help.</p>
-                    <a href="#" class="btn btn-outline">Contact Us</a>
+            <div class="faq-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How does PT-141 work?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            PT-141 activates melanocortin receptors in your brain, targeting the neurological pathways that control sexual desire. Unlike other treatments, it works on desire itself—not just blood flow.
+                        </div>
+                    </div>
                 </div>
-                <div class="faq-list">
-                    <div class="faq-item active">
-                        <button class="faq-question">
-                            How does the Little Pink Pill work?
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                            </svg>
-                        </button>
-                        <div class="faq-answer">
-                            PT-141 works by activating melanocortin receptors in your brain, which helps increase sexual desire and arousal. Unlike treatments that focus on blood flow, this works on the neurological pathways that control desire.
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How quickly will I see results?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Most women notice an increase in desire within 2-4 weeks of consistent use. Full benefits are typically experienced after 6-8 weeks of treatment.
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Is it safe?
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                            </svg>
-                        </button>
-                        <div class="faq-answer">
-                            Yes, PT-141 has been studied extensively and has a strong safety profile. Our doctors review your health history to ensure it's appropriate for you. Common side effects are mild and may include flushing or nausea.
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            How quickly will I see results?
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                            </svg>
-                        </button>
-                        <div class="faq-answer">
-                            Most women notice an increase in desire within 2-4 weeks of consistent use. Full benefits are typically experienced after 6-8 weeks.
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Is the packaging discreet?
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                            </svg>
-                        </button>
-                        <div class="faq-answer">
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is the packaging discreet?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
                             Absolutely. All orders ship in plain, unmarked packaging with no indication of the contents. Your privacy is our priority.
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            What if it doesn't work for me?
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                            </svg>
-                        </button>
-                        <div class="faq-answer">
-                            We offer a satisfaction guarantee. If you're not seeing results after 60 days, contact our care team and we'll work with you on next steps.
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I cancel my subscription?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes, you can cancel, pause, or modify your subscription at any time from your account dashboard or by contacting our care team. No questions asked.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What if it doesn't work for me?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            We offer a satisfaction guarantee. If you're not seeing results after 60 days, contact our care team and we'll work with you on next steps, including a full refund.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do I need an existing prescription?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            No existing prescription is needed. Our licensed physicians will evaluate your health profile during the online consultation and prescribe if appropriate.
                         </div>
                     </div>
                 </div>
@@ -1451,17 +1349,11 @@
     </section>
 
     <!-- Final CTA -->
-    <section class="final-cta" id="get-started">
+    <section class="final-cta">
         <div class="container">
             <h2>Ready to rediscover your desire?</h2>
-            <p>Join thousands of women who've taken the first step. Start your confidential consultation today.</p>
-            <a href="#" class="btn btn-primary btn-lg">Start Your Consultation</a>
-            <p class="guarantee-text">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-                100% Satisfaction Guarantee · Discreet Shipping · Cancel Anytime
-            </p>
+            <p>Join thousands of women who've taken the first step.</p>
+            <a href="#" class="btn btn-lg">Start Your Consultation</a>
         </div>
     </section>
 
@@ -1489,19 +1381,88 @@
     </footer>
 
     <script>
-        // FAQ accordion
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.parentElement;
+        // Pricing data
+        const pricing = {
+            10: { price: 99, subscribe: 89 },
+            20: { price: 179, subscribe: 161 },
+            30: { price: 249, subscribe: 224 }
+        };
+
+        let currentDoses = 20;
+        let isSubscribe = true;
+
+        // Image gallery
+        function changeImage(src, thumbnail) {
+            document.getElementById('mainImageSrc').src = src;
+            document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+            thumbnail.classList.add('active');
+        }
+
+        // Toggle subscribe/one-time
+        function togglePurchase(type) {
+            isSubscribe = type === 'subscribe';
+            document.querySelectorAll('.toggle-option').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.type === type);
+            });
+
+            // Update price displays in dose options
+            document.querySelectorAll('.subscribe-price').forEach(el => {
+                el.style.display = isSubscribe ? 'inline' : 'none';
+            });
+            document.querySelectorAll('.onetime-price').forEach(el => {
+                el.style.display = isSubscribe ? 'none' : 'inline';
+            });
+
+            updatePriceDisplay();
+        }
+
+        // Select dose
+        function selectDose(option) {
+            document.querySelectorAll('.dose-option').forEach(opt => opt.classList.remove('active'));
+            option.classList.add('active');
+            currentDoses = parseInt(option.dataset.doses);
+            updatePriceDisplay();
+        }
+
+        // Update price display
+        function updatePriceDisplay() {
+            const data = pricing[currentDoses];
+            const price = isSubscribe ? data.subscribe : data.price;
+            const savings = data.price - data.subscribe;
+
+            document.getElementById('planDisplay').textContent = `${currentDoses} doses`;
+            document.getElementById('frequencyDisplay').textContent = isSubscribe ? 'Monthly subscription' : 'One-time purchase';
+            document.getElementById('totalDisplay').textContent = `$${price}`;
+
+            const savingsRow = document.getElementById('savingsRow');
+            if (isSubscribe) {
+                savingsRow.style.display = 'flex';
+                document.getElementById('savingsDisplay').textContent = `$${savings} (10%)`;
+            } else {
+                savingsRow.style.display = 'none';
+            }
+        }
+
+        // Accordion functionality
+        document.querySelectorAll('.accordion-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
                 const isActive = item.classList.contains('active');
-
-                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-
-                if (!isActive) {
-                    item.classList.add('active');
-                }
+                document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
             });
         });
+
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // Initialize
+        updatePriceDisplay();
     </script>
 
 </body>
